@@ -40,6 +40,12 @@ public class Vector3WorldOp : MonoBehaviour
 
             if(operation == Operation.Sub)
                 result.value = operands[0].value.value - operands[1].value.value;
+
+            if (operation == Operation.Cross)
+                result.value = Vector3.Cross(operands[0].value.value, operands[1].value.value);
+
+            if (operation == Operation.Proj)
+                result.value = Vector3.Project(operands[0].value.value, operands[1].value.value);
         }
     }
 
@@ -90,6 +96,8 @@ public class Vector3WorldOp : MonoBehaviour
             operands[0] = operands[1];
             operands[1] = temp;
         }
+
+        Debug.Log("--- SWAP OPERANDS --- " + operands.Count);
     }
 
 }
