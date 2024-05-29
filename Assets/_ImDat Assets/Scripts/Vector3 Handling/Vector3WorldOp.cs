@@ -16,6 +16,7 @@ public class Vector3WorldOp : MonoBehaviour
     [Header("System Stuff - Usually Don't Touch")]
     public Vector3WorldBase clonePrefab;
     public Transform clonePoint;
+    public bool cloneAllow = false;
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +72,7 @@ public class Vector3WorldOp : MonoBehaviour
             {
                 if (!operands.Contains(wb))
                 {
+                    other.enabled = false;
                     wb.DetachHandle();
                     operands.Add(wb);
                 }
@@ -81,11 +83,21 @@ public class Vector3WorldOp : MonoBehaviour
 
     public void SpawnClone()
     {
-        if (operands.Count == 2)
+        if (operands.Count == 2 && cloneAllow)
         {
             Vector3WorldBase newClone = Instantiate(clonePrefab, clonePoint.position, Quaternion.identity);
             newClone.referenceValue = result;
         }
+    }
+
+    public void CloneAllow()
+    {
+        cloneAllow = true;
+    }
+
+    public void CloneBlock()
+    {
+        cloneAllow = false;
     }
 
     public void SwapOperands()

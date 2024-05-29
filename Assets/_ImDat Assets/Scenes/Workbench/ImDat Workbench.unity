@@ -1242,6 +1242,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1755426661733781391, guid: f395b357b12d078419ad2019f4d52829, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: f395b357b12d078419ad2019f4d52829, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1285,6 +1289,38 @@ PrefabInstance:
     - target: {fileID: 2218496723442559054, guid: f395b357b12d078419ad2019f4d52829, type: 3}
       propertyPath: m_Name
       value: XR Origin Hands (XR Rig) 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237049687586235588, guid: f395b357b12d078419ad2019f4d52829, type: 3}
+      propertyPath: m_PokeWidth
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237049687586235588, guid: f395b357b12d078419ad2019f4d52829, type: 3}
+      propertyPath: m_PokeHoverRadius
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237049687586235588, guid: f395b357b12d078419ad2019f4d52829, type: 3}
+      propertyPath: m_PokeSelectWidth
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237049687586235588, guid: f395b357b12d078419ad2019f4d52829, type: 3}
+      propertyPath: m_PokeInteractionOffset
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209797214075343310, guid: f395b357b12d078419ad2019f4d52829, type: 3}
+      propertyPath: m_PokeWidth
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209797214075343310, guid: f395b357b12d078419ad2019f4d52829, type: 3}
+      propertyPath: m_PokeHoverRadius
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209797214075343310, guid: f395b357b12d078419ad2019f4d52829, type: 3}
+      propertyPath: m_PokeSelectWidth
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209797214075343310, guid: f395b357b12d078419ad2019f4d52829, type: 3}
+      propertyPath: m_PokeInteractionOffset
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 8856519734889302113, guid: f395b357b12d078419ad2019f4d52829, type: 3}
       propertyPath: m_RaycastMask.m_Bits

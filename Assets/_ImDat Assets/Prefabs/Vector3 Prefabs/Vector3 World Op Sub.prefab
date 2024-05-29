@@ -452,6 +452,7 @@ MonoBehaviour:
   operands: []
   clonePrefab: {fileID: 2038624263290674108, guid: 4682da732f0c31c4085eed488c528169, type: 3}
   clonePoint: {fileID: 1717412146870139889}
+  cloneAllow: 0
 --- !u!33 &6283258194121768520
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -548,8 +549,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
 --- !u!114 &1414906312856037788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,10 +598,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5194230365212933608}
+        m_TargetAssemblyTypeName: Vector3WorldOp, Assembly-CSharp
+        m_MethodName: CloneAllow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5194230365212933608}
+        m_TargetAssemblyTypeName: Vector3WorldOp, Assembly-CSharp
+        m_MethodName: CloneBlock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -697,7 +722,7 @@ Transform:
   m_GameObject: {fileID: 3841863506205595105}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.298, z: 0}
+  m_LocalPosition: {x: 0, y: 2.3, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -971,8 +996,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -0.06, y: 1.393, z: 0.2895}
-  - {x: -0.06, y: 1.6165, z: 0.2895}
+  - {x: 0.044, y: 1.393, z: 0.2895}
+  - {x: 0.044, y: 1.6165, z: 0.2895}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
