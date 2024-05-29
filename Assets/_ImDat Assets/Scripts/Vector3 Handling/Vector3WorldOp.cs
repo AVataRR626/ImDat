@@ -17,6 +17,7 @@ public class Vector3WorldOp : MonoBehaviour
     public Vector3WorldBase clonePrefab;
     public Transform clonePoint;
     public bool cloneAllow = false;
+    public float spawnClock = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,15 @@ public class Vector3WorldOp : MonoBehaviour
 
             if (operation == Operation.Proj)
                 result.value = Vector3.Project(operands[0].value.value, operands[1].value.value);
+        }
+
+        if(spawnClock > 0)
+        {
+            spawnClock -= Time.deltaTime;
+        }
+        else
+        {
+            spawnClock = 0;
         }
     }
 
@@ -83,10 +93,11 @@ public class Vector3WorldOp : MonoBehaviour
 
     public void SpawnClone()
     {
-        if (operands.Count == 2 && cloneAllow)
+        if (operands.Count == 2 && cloneAllow && spawnClock <= 0)
         {
             Vector3WorldBase newClone = Instantiate(clonePrefab, clonePoint.position, Quaternion.identity);
             newClone.referenceValue = result;
+            spawnClock = 0.5f;
         }
     }
 

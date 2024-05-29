@@ -1246,6 +1246,10 @@ PrefabInstance:
       propertyPath: m_RaycastMask.m_Bits
       value: 33
       objectReference: {fileID: 0}
+    - target: {fileID: 1820897918385990095, guid: f395b357b12d078419ad2019f4d52829, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: f395b357b12d078419ad2019f4d52829, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
