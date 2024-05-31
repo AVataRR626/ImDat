@@ -453,6 +453,7 @@ MonoBehaviour:
   clonePrefab: {fileID: 2038624263290674108, guid: 4682da732f0c31c4085eed488c528169, type: 3}
   clonePoint: {fileID: 1717412146870139889}
   cloneAllow: 0
+  spawnClock: 0
 --- !u!33 &6283258194121768520
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1268,7 +1269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.85
+      value: 0.82
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1422,7 +1423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.836
+      value: -0.82
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_LocalPosition.z
