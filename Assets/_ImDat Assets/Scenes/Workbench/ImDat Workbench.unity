@@ -790,7 +790,7 @@ GameObject:
   - component: {fileID: 1249617922}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1589,6 +1589,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119d18cc9fb51ec4b8f700fc2803df8b, type: 3}
+--- !u!1001 &5772707781324766912
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1096927804828056136, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096927804828056136, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172205694159824684, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_Name
+      value: Del Hammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284203578245711107, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.349
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284203578245711107, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.325
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284203578245711107, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.089
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284203578245711107, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284203578245711107, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284203578245711107, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284203578245711107, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284203578245711107, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284203578245711107, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284203578245711107, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f2286a6bbd2c41142bc29050448d7365, type: 3}
 --- !u!65 &5802433146987126323 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 7042572652811758169, guid: 63d440b4c1c975b4fb373d8fb69ed626, type: 3}
@@ -1785,3 +1850,4 @@ SceneRoots:
   - {fileID: 1616605128}
   - {fileID: 212575800}
   - {fileID: 1737061002}
+  - {fileID: 5772707781324766912}

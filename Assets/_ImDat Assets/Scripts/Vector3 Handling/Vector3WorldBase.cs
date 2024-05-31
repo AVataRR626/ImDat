@@ -31,6 +31,7 @@ public class Vector3WorldBase : MonoBehaviour
         {
             value.value = referenceValue.value;
         }
+
     }
 
 

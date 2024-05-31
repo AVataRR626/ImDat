@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - Soft Mergable
+  - Environment
   layers:
   - Default
   - TransparentFX

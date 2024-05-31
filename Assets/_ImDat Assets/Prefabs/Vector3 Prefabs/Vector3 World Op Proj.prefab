@@ -378,6 +378,7 @@ MonoBehaviour:
   clonePrefab: {fileID: 2038624263290674108, guid: 4682da732f0c31c4085eed488c528169, type: 3}
   clonePoint: {fileID: 4611226470491930387}
   cloneAllow: 0
+  spawnClock: 0
 --- !u!33 &1189606967730962929
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -518,9 +519,6 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
-  m_LastSelectExited:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6729835529405994590}
         m_TargetAssemblyTypeName: Vector3WorldOp, Assembly-CSharp
@@ -534,7 +532,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_SelectEntered:
+  m_LastSelectExited:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6729835529405994590}
@@ -549,6 +547,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
