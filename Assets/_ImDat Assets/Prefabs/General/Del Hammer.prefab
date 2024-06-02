@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3208838068208576183}
   - component: {fileID: 7592817941175134869}
   - component: {fileID: 1096927804828056136}
-  - component: {fileID: 5050076162902037398}
   - component: {fileID: 5016738388903984701}
+  - component: {fileID: 3043821340324052056}
   m_Layer: 0
   m_Name: Del Hammer
   m_TagString: Untagged
@@ -121,8 +121,8 @@ Rigidbody:
   m_GameObject: {fileID: 5172205694159824684}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 0.05
+  m_Drag: 2
+  m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -139,21 +139,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5050076162902037398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5172205694159824684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedadd38e2a5414ab1c765a3804ee34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disableDelay: 0.5
-  excludeTags:
-  - Environment
 --- !u!114 &5016738388903984701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +214,7 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AttachTransform: {fileID: 2184051362816934834}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -277,6 +262,21 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &3043821340324052056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5172205694159824684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc662a6fb267ed4780e32e2ef88a0d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableDelay: 0.5
+  excludeTags:
+  - Environment
 --- !u!1 &5520079344325137868
 GameObject:
   m_ObjectHideFlags: 0
