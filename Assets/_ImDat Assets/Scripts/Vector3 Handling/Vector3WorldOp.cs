@@ -19,6 +19,16 @@ public class Vector3WorldOp : MonoBehaviour
     public bool cloneAllow = false;
     public float spawnClock = 0;
 
+    public void OnDestroy()
+    {
+        foreach (Vector3WorldBase v in operands)
+        {   
+
+            if (v != null)
+                Destroy(v.gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

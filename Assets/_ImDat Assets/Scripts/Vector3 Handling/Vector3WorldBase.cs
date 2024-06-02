@@ -19,12 +19,15 @@ public class Vector3WorldBase : MonoBehaviour
 
     public void Update()
     {
-        if(myHandle != null)
+        if (myHandle != null)
         {
-            transform.position = myHandle.transform.position;
+            if (myHandle.activeSelf)
+            {
+                transform.position = myHandle.transform.position;
 
-            if(trackRotation)
-                transform.rotation = myHandle.transform.rotation;
+                if (trackRotation)
+                    transform.rotation = myHandle.transform.rotation;
+            }
         }
 
         if(referenceValue != null)
@@ -37,7 +40,7 @@ public class Vector3WorldBase : MonoBehaviour
 
     public void DetachHandle()
     {
-        Destroy(myHandle);
+        myHandle.SetActive(false);
         if(myRenderer != null)
         {
             myRenderer.enabled = false;

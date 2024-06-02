@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 7185658523818339205}
   - component: {fileID: 820650513654450291}
   m_Layer: 0
-  m_Name: TableHandle
+  m_Name: Flat Panel Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1069,7 +1069,7 @@ GameObject:
   - component: {fileID: 7403072357431632353}
   - component: {fileID: 7403072357431632352}
   m_Layer: 0
-  m_Name: TableOffset
+  m_Name: Panel Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
