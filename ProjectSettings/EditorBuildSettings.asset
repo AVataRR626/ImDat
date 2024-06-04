@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_ImDat Assets/Scenes/Workbench/ImDat Workbench.unity
+    path: Assets/_ImDat Assets/Scenes/Vector Arithmetic.unity
     guid: 91dc4f01ac9820241943222b283ea7dc
   - enabled: 1
     path: Assets/Samples/XR Hands/1.4.1/HandVisualizer/HandVisualizer.unity
