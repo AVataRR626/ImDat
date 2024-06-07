@@ -6,16 +6,24 @@ public class DestroyOnCollide : MonoBehaviour
 {
     public float disableDelay = 0.5f;
     public List<string> excludeTags;
+    public bool armed = true;
+
+    public void Arm(bool newState)
+    {
+        armed = newState;
+    }
 
     public void OnCollisionEnter(Collision collision)
     {
         Debug.Log(name + " DeleteOnCollide: ");
-
-        if (!excludeTags.Contains(collision.collider.tag))
+        if (armed)
         {
-            IEnumerator coroutine;
-            coroutine = DestroyDelayed(collision.gameObject, disableDelay);
-            StartCoroutine(coroutine);
+            if (!excludeTags.Contains(collision.collider.tag))
+            {
+                IEnumerator coroutine;
+                coroutine = DestroyDelayed(collision.gameObject, disableDelay);
+                StartCoroutine(coroutine);
+            }
         }
     }
 
