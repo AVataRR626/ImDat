@@ -778,6 +778,7 @@ GameObject:
   - component: {fileID: 757399651101261408}
   - component: {fileID: 1169816170133174932}
   - component: {fileID: 5026763027374507697}
+  - component: {fileID: -6790749465259153503}
   m_Layer: 0
   m_Name: Vector3 World Op Add
   m_TagString: Untagged
@@ -1110,6 +1111,24 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &-6790749465259153503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076466200582528337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3b1336b630790488edf2b706231370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: {x: 0.2, y: 0.2, z: 0.2}
+  gridPos: {x: 0, y: 0, z: 0}
+  snapSpeed: 8
+  floatFactor: {x: 0, y: 0, z: 0}
+  intFactor: {x: 0, y: 0, z: 0}
+  debugDest: {fileID: 0}
 --- !u!1 &8323438238350072349
 GameObject:
   m_ObjectHideFlags: 0

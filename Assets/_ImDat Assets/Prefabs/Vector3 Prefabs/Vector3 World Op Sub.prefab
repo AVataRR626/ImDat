@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 604602922490156701}
   - component: {fileID: 6342515146816993470}
   - component: {fileID: 1414906312856037788}
+  - component: {fileID: 6148601801518146918}
   m_Layer: 0
   m_Name: Vector3 World Op Sub
   m_TagString: Untagged
@@ -625,6 +626,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8217434077262320882}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
@@ -641,6 +654,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7658970260035489818}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8217434077262320882}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -723,6 +748,24 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &6148601801518146918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841557228153725725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3b1336b630790488edf2b706231370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: {x: 0.2, y: 0.2, z: 0.2}
+  gridPos: {x: 0, y: 0, z: 0}
+  snapSpeed: 8
+  floatFactor: {x: 0, y: 0, z: 0}
+  intFactor: {x: 0, y: 0, z: 0}
+  debugDest: {fileID: 0}
 --- !u!1 &3841863506205595105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,8 +1065,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -0.161, y: 1.393, z: 0.487}
-  - {x: -0.161, y: 1.6165, z: 0.487}
+  - {x: -0.161, y: 1.78, z: 0.487}
+  - {x: -0.161, y: 2.0035, z: 0.487}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1597,6 +1640,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+--- !u!1 &8217434077262320882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4922582553321831162, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+  m_PrefabInstance: {fileID: 3916642942170787336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8526826799079934823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}

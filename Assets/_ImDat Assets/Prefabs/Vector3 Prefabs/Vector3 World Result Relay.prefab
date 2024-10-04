@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2196579854008962303}
   - component: {fileID: 8599539697451115943}
   - component: {fileID: 2506101929298086654}
+  - component: {fileID: -3961751208059990071}
   m_Layer: 0
   m_Name: Vector3 World Result Relay
   m_TagString: Soft Mergable
@@ -117,6 +118,24 @@ MonoBehaviour:
   referenceValue: {fileID: 4222404004083480227}
   anchorPoint: {fileID: 7786487079871747828}
   referencePoint: {fileID: 6236811580584093001}
+--- !u!114 &-3961751208059990071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136240715586234643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3b1336b630790488edf2b706231370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: {x: 0.2, y: 0.2, z: 0.2}
+  gridPos: {x: 0, y: 0, z: 0}
+  snapSpeed: 8
+  floatFactor: {x: 0, y: 0, z: 0}
+  intFactor: {x: 0, y: 0, z: 0}
+  debugDest: {fileID: 0}
 --- !u!1 &408809553907902076
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,9 +775,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 1
   m_DistanceCalculationMode: 1
@@ -817,33 +833,6 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectCanceled:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
@@ -890,10 +879,10 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
-  m_AttachPointCompatibilityMode: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+  m_FarAttachMode: 0
 --- !u!1 &6169534861046378633
 GameObject:
   m_ObjectHideFlags: 0
