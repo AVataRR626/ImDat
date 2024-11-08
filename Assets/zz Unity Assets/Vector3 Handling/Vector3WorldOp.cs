@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -18,12 +19,12 @@ public class Vector3WorldOp : MonoBehaviour
     public Transform clonePoint;
     public bool cloneAllow = false;
     public float spawnClock = 0;
+    public List<LineRendererLink> pgramLines;
 
     public void OnDestroy()
     {
         foreach (Vector3WorldBase v in operands)
-        {   
-
+        {
             if (v != null)
                 Destroy(v.gameObject);
         }
@@ -95,6 +96,10 @@ public class Vector3WorldOp : MonoBehaviour
                     other.enabled = false;
                     wb.DetachHandle();
                     operands.Add(wb);
+
+                    //align parallelogram graphics
+                    Vector3RelaySetterPosDelta rps = wb.GetComponent<Vector3RelaySetterPosDelta>();
+                    pgramLines[operands.Count - 1].linkPoint = rps.referencePoint;
                 }
             }
         }
