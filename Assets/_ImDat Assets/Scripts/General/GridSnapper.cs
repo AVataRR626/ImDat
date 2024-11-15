@@ -7,6 +7,7 @@ public class GridSnapper : MonoBehaviour
     public Vector3 gridSize = new Vector3(0.01f,0.01f,0.01f);
     public Vector3 gridPos;
     public float snapSpeed = 1;
+    public bool autoSnap = false;
 
     [Header("Debug")]
     public Vector3 floatFactor;
@@ -22,8 +23,14 @@ public class GridSnapper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(autoSnap)
+            Snap();
+    }
+
+    public void Snap()
+    {
         GetGridPos();
-        SnapToGridPos();
+        ForceSnapToGridPos();
     }
 
     public void GetGridPos()
@@ -41,7 +48,7 @@ public class GridSnapper : MonoBehaviour
         gridPos.z = intFactor.z * gridSize.z;
     }
     
-    public void SnapToGridPos()
+    public void ForceSnapToGridPos()
     {
         transform.position = Vector3.Lerp(transform.position, gridPos, snapSpeed * Time.deltaTime);
     }

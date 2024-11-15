@@ -1,3 +1,4 @@
+using System.Buffers;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -19,7 +20,7 @@ public class Vector3WorldOp : MonoBehaviour
     public Transform clonePoint;
     public bool cloneAllow = false;
     public float spawnClock = 0;
-    public List<LineRendererLink> pgramLines;
+    public List<LineRendererLink> guideLines;
 
     public void OnDestroy()
     {
@@ -91,15 +92,35 @@ public class Vector3WorldOp : MonoBehaviour
             Vector3WorldBase wb = other.GetComponent<Vector3WorldBase>();
             if (wb != null)
             {
+                
                 if (!operands.Contains(wb))
                 {
                     other.enabled = false;
                     wb.DetachHandle();
                     operands.Add(wb);
 
-                    //align parallelogram graphics
-                    Vector3RelaySetterPosDelta rps = wb.GetComponent<Vector3RelaySetterPosDelta>();
-                    pgramLines[operands.Count - 1].linkPoint = rps.referencePoint;
+                    if (operation == Operation.Add)
+                    {
+                        //align parallelogram graphics
+                        Vector3RelaySetterPosDelta rps = wb.GetComponent<Vector3RelaySetterPosDelta>();
+                        guideLines[operands.Count - 1].linkPoint = rps.referencePoint;
+                    }
+
+                    if(operation == Operation.Sub)
+                    {
+                        if(operands.Count == 2)
+                        {
+                            //align direction graphics
+                            Vector3RelaySetterPosDelta [] rps = new Vector3RelaySetterPosDelta[2];
+                            rps[0] = operands[0].GetComponent<Vector3RelaySetterPosDelta>();
+                            rps[1] = operands[1].GetComponent<Vector3RelaySetterPosDelta>();
+
+                            guideLines[0].linkPoint = rps[0].referencePoint;
+                            guideLines[0].transform.parent = rps[1].referencePoint;
+                            guideLines[0].transform.localPosition = Vector3.zero;
+                        }
+                        
+                    }
                 }
             }
         }
