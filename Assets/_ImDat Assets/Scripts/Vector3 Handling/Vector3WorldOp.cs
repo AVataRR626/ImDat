@@ -121,6 +121,19 @@ public class Vector3WorldOp : MonoBehaviour
                         }
                         
                     }
+
+                    if(operation == Operation.Proj)
+                    {
+                        if (operands.Count == 2)
+                        {
+                            //align projection graphics
+                            Vector3RelaySetterPosDelta[] rps = new Vector3RelaySetterPosDelta[2];
+                            rps[0] = resultDisplay.GetComponent<Vector3RelaySetterPosDelta>();
+                            rps[1] = operands[0].GetComponent<Vector3RelaySetterPosDelta>();
+
+                            guideLines[0].linkPoint = rps[1].referencePoint;
+                        }
+                    }
                 }
             }
         }
