@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1836151, g: 0.2278413, b: 0.29792386, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -706,9 +702,8 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299639867}
   m_Enabled: 1
-  serializedVersion: 10
+  serializedVersion: 11
   m_Type: 1
-  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -758,8 +753,12 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!4 &299639869
 Transform:
   m_ObjectHideFlags: 0
@@ -1311,6 +1310,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3894,6 +3896,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6757,6 +6762,14 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[1].y
       value: 1.6165
       objectReference: {fileID: 0}
+    - target: {fileID: 3420712742987630350, guid: 63d440b4c1c975b4fb373d8fb69ed626, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11090383
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703892027095081766, guid: 63d440b4c1c975b4fb373d8fb69ed626, type: 3}
+      propertyPath: m_PokeFilter
+      value: 
+      objectReference: {fileID: 25180517322027522}
     - target: {fileID: 3841557228153725725, guid: 63d440b4c1c975b4fb373d8fb69ed626, type: 3}
       propertyPath: m_Name
       value: Vector3 World Op Sub
@@ -6806,6 +6819,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63d440b4c1c975b4fb373d8fb69ed626, type: 3}
+--- !u!114 &25180517322027522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3026656592703655275, guid: 63d440b4c1c975b4fb373d8fb69ed626, type: 3}
+  m_PrefabInstance: {fileID: 25180517322027521}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115f1a2a50d85cd4b9d6dad4c95622be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &376057459612590743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7608,6 +7632,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8016050131627228507, guid: 0d1214c4ac78e7c47ab80e9d38f23a68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.110903874
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295829725747894643, guid: 0d1214c4ac78e7c47ab80e9d38f23a68, type: 3}
+      propertyPath: m_PokeFilter
+      value: 
+      objectReference: {fileID: 3384451608880404397}
     - target: {fileID: 8673403963472071651, guid: 0d1214c4ac78e7c47ab80e9d38f23a68, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.138
@@ -7657,6 +7689,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d1214c4ac78e7c47ab80e9d38f23a68, type: 3}
+--- !u!114 &3384451608880404397 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7658005168960649022, guid: 0d1214c4ac78e7c47ab80e9d38f23a68, type: 3}
+  m_PrefabInstance: {fileID: 3384451608880404396}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115f1a2a50d85cd4b9d6dad4c95622be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3604777738622751711
 MonoBehaviour:
   m_ObjectHideFlags: 0
