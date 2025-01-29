@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Vector3WorldOp : MonoBehaviour
 {
-    public enum Operation { Add, Sub, Cross, Proj };
+    public enum Operation { Add, Sub, Cross, Proj, PlelPip};
 
     public Operation operation;
     public Vector3Relay result;
@@ -37,7 +37,7 @@ public class Vector3WorldOp : MonoBehaviour
         if (result == null)
             result = GetComponent<Vector3Relay>();
     }
-    void Update()
+    void FixedUpdate()
     {
         TrackOperands();
 
@@ -47,7 +47,8 @@ public class Vector3WorldOp : MonoBehaviour
         }
         else if(operands.Count == 2)
         {
-            resultDisplay.SetActive(true);
+            if(operation != Operation.PlelPip)
+                resultDisplay.SetActive(true);
 
             if (operation == Operation.Add)
                 result.value = operands[0].value.value + operands[1].value.value;
@@ -132,6 +133,29 @@ public class Vector3WorldOp : MonoBehaviour
                             rps[1] = operands[0].GetComponent<Vector3RelaySetterPosDelta>();
 
                             guideLines[0].linkPoint = rps[1].referencePoint;
+                        }
+                    }
+
+                    if(operation == Operation.PlelPip)
+                    {
+                        if(operands.Count == 2)
+                        {
+                            Vector3 AB = operands[0].value.value + operands[1].value.value;
+
+                            Vector3RelaySetterPosDelta[] rps = new Vector3RelaySetterPosDelta[2];
+                            rps[0] = operands[0].GetComponent<Vector3RelaySetterPosDelta>();
+                            rps[1] = operands[1].GetComponent<Vector3RelaySetterPosDelta>();
+
+                            guideLines[0].linkPoint = rps[0].referencePoint;
+                            guideLines[1].linkPoint = rps[1].referencePoint;
+                        }
+
+                        if (operands.Count == 3)
+                        {
+                            Vector3 AB = operands[0].value.value + operands[1].value.value;
+                            Vector3 AC = operands[0].value.value + operands[2].value.value;                            
+                            Vector3 CB = operands[1].value.value + operands[2].value.value;
+                            Vector3 finalCorner = AC + AB;
                         }
                     }
                 }
