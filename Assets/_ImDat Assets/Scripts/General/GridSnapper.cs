@@ -8,11 +8,11 @@ public class GridSnapper : MonoBehaviour
     public Vector3 gridPos;
     public float snapSpeed = 1;
     public bool autoSnap = false;
+    public float forceSnapDistance = 0.01f;
 
     [Header("Debug")]
     public Vector3 floatFactor;
     public Vector3 intFactor;
-    public Transform debugDest;
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +24,13 @@ public class GridSnapper : MonoBehaviour
     void Update()
     {
         if(autoSnap)
-            Snap();
+            SmoothSnap();
     }
 
-    public void Snap()
+    public void SmoothSnap()
     {
         GetGridPos();
-        ForceSnapToGridPos();
+        Float2SnapPos();
     }
 
     public void GetGridPos()
@@ -48,8 +48,22 @@ public class GridSnapper : MonoBehaviour
         gridPos.z = intFactor.z * gridSize.z;
     }
     
-    public void ForceSnapToGridPos()
+    public void Float2SnapPos()
     {
-        transform.position = Vector3.Lerp(transform.position, gridPos, snapSpeed * Time.deltaTime);
+        if(Vector3.Distance(transform.position,gridPos) <= forceSnapDistance)
+            Snap2Grid();
+        else
+            transform.position = Vector3.Lerp(transform.position, gridPos, snapSpeed * Time.deltaTime);
+    }
+
+    public void Snap2Grid()
+    {
+        GetGridPos();
+        transform.position = gridPos;
+
+        Rigidbody myRbody = GetComponent<Rigidbody>();
+
+        if (myRbody != null)
+            myRbody.linearVelocity = Vector3.zero;
     }
 }
