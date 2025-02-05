@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
-public class Vector3RelaySetterPosDelta : MonoBehaviour
+public class Vector3RelaySetterPosDelta : MonoBehaviour, IRelayReferencePoint
 {
     public Vector3Relay output;
     public Transform anchorPoint;
@@ -28,4 +29,13 @@ public class Vector3RelaySetterPosDelta : MonoBehaviour
             }
         }
     }
+
+    public Transform GetReferencePoint()
+    {
+        return referencePoint;
+    }
+}
+
+public interface IRelayReferencePoint
+{   public Transform GetReferencePoint();
 }

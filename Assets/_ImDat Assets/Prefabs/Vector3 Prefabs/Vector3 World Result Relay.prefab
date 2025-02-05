@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7786487079871747828}
   - component: {fileID: 4222404004083480227}
   - component: {fileID: 2038624263290674108}
+  - component: {fileID: 2506101929298086654}
   - component: {fileID: 2196579854008962303}
   - component: {fileID: 8599539697451115943}
-  - component: {fileID: 2506101929298086654}
   m_Layer: 0
   m_Name: Vector3 World Result Relay
   m_TagString: Soft Mergable
@@ -73,6 +73,21 @@ MonoBehaviour:
   value: {fileID: 4222404004083480227}
   referenceValue: {fileID: 0}
   myRenderer: {fileID: 6849473275982490702}
+--- !u!114 &2506101929298086654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136240715586234643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 276a3b6602807ce41acac0705bc2f880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceValue: {fileID: 4222404004083480227}
+  anchorPoint: {fileID: 7786487079871747828}
+  referencePoint: {fileID: 6236811580584093001}
 --- !u!33 &2196579854008962303
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -102,21 +117,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9, y: 0.9, z: 0.9}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2506101929298086654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136240715586234643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276a3b6602807ce41acac0705bc2f880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  referenceValue: {fileID: 4222404004083480227}
-  anchorPoint: {fileID: 7786487079871747828}
-  referencePoint: {fileID: 6236811580584093001}
 --- !u!1 &408809553907902076
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,9 +892,10 @@ MonoBehaviour:
   gridPos: {x: 0, y: 0, z: 0}
   snapSpeed: 1
   autoSnap: 0
+  forceSnapDistance: 0.01
   floatFactor: {x: 0, y: 0, z: 0}
   intFactor: {x: 0, y: 0, z: 0}
-  debugDest: {fileID: 0}
+  myRbody: {fileID: 0}
 --- !u!1 &6169534861046378633
 GameObject:
   m_ObjectHideFlags: 0

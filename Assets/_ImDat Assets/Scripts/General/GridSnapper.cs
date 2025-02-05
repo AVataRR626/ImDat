@@ -13,11 +13,12 @@ public class GridSnapper : MonoBehaviour
     [Header("Debug")]
     public Vector3 floatFactor;
     public Vector3 intFactor;
+    public Rigidbody myRbody;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        myRbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -58,12 +59,15 @@ public class GridSnapper : MonoBehaviour
 
     public void Snap2Grid()
     {
+        Debug.Log("--- Snap2Grid --- ");
+
         GetGridPos();
         transform.position = gridPos;
 
-        Rigidbody myRbody = GetComponent<Rigidbody>();
-
         if (myRbody != null)
+        {
             myRbody.linearVelocity = Vector3.zero;
+        }
+        
     }
 }

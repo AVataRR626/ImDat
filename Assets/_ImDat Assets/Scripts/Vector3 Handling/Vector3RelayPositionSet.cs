@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vector3RelayPositionSet : MonoBehaviour
+public class Vector3RelayPositionSet : MonoBehaviour, IRelayReferencePoint
 {
     public Vector3Relay referenceValue;
     public Transform anchorPoint;
@@ -21,5 +21,10 @@ public class Vector3RelayPositionSet : MonoBehaviour
                 referencePoint.localPosition = referenceValue.value;
             }
         }
+    }
+
+    public Transform GetReferencePoint()
+    {
+        return referencePoint;
     }
 }

@@ -706,6 +706,7 @@ GameObject:
   - component: {fileID: 5685849892289603700}
   - component: {fileID: 8302033555731663626}
   - component: {fileID: 7329572018027119840}
+  - component: {fileID: -8353972138621572471}
   m_Layer: 0
   m_Name: Vector3 World Op Span
   m_TagString: Untagged
@@ -765,6 +766,15 @@ MonoBehaviour:
   resultDisplay: {fileID: 457869708335851210}
   maxSubjects: 2
   operands: []
+  onFirstOperand:
+    m_PersistentCalls:
+      m_Calls: []
+  onSecondOperand:
+    m_PersistentCalls:
+      m_Calls: []
+  onMergeOperand:
+    m_PersistentCalls:
+      m_Calls: []
   clonePrefab: {fileID: 2038624263290674108, guid: 4682da732f0c31c4085eed488c528169, type: 3}
   clonePoint: {fileID: 8704654044400196045}
   cloneAllow: 0
@@ -994,6 +1004,26 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &-8353972138621572471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290541710775089376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3b1336b630790488edf2b706231370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridSize: {x: 0.2, y: 0.2, z: 0.2}
+  gridPos: {x: 0, y: 0, z: 0}
+  snapSpeed: 8
+  autoSnap: 0
+  forceSnapDistance: 0.01
+  floatFactor: {x: 0, y: 0, z: 0}
+  intFactor: {x: 0, y: 0, z: 0}
+  myRbody: {fileID: 0}
 --- !u!1 &8299955270447384330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,6 +1383,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5201160736167235804}
     m_Modifications:
+    - target: {fileID: 377291013443947822, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+      propertyPath: m_MaxDistance
+      value: 0.012
+      objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.0575657

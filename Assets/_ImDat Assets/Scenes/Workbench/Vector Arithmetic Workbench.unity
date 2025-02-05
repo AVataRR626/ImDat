@@ -2183,9 +2183,10 @@ MonoBehaviour:
   gridPos: {x: 0, y: 0, z: 0}
   snapSpeed: 8
   autoSnap: 0
+  forceSnapDistance: 0.01
   floatFactor: {x: 0, y: 0, z: 0}
   intFactor: {x: 0, y: 0, z: 0}
-  debugDest: {fileID: 0}
+  myRbody: {fileID: 0}
 --- !u!1 &210985530
 GameObject:
   m_ObjectHideFlags: 0
@@ -6294,7 +6295,7 @@ Transform:
   m_GameObject: {fileID: 606705310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.033, y: 1.154, z: 0.468}
+  m_LocalPosition: {x: -0.1753, y: 1.154, z: 0.468}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7404,9 +7405,10 @@ MonoBehaviour:
   gridPos: {x: 0, y: 0, z: 0}
   snapSpeed: 8
   autoSnap: 0
+  forceSnapDistance: 0.01
   floatFactor: {x: 0, y: 0, z: 0}
   intFactor: {x: 0, y: 0, z: 0}
-  debugDest: {fileID: 0}
+  myRbody: {fileID: 0}
 --- !u!114 &769947435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8362,9 +8364,10 @@ MonoBehaviour:
   gridPos: {x: 0, y: 0, z: 0}
   snapSpeed: 8
   autoSnap: 0
+  forceSnapDistance: 0.01
   floatFactor: {x: 0, y: 0, z: 0}
   intFactor: {x: 0, y: 0, z: 0}
-  debugDest: {fileID: 0}
+  myRbody: {fileID: 0}
 --- !u!114 &880075507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16111,9 +16114,10 @@ MonoBehaviour:
   gridPos: {x: 0, y: 0, z: 0}
   snapSpeed: 8
   autoSnap: 0
+  forceSnapDistance: 0.01
   floatFactor: {x: 0, y: 0, z: 0}
   intFactor: {x: 0, y: 0, z: 0}
-  debugDest: {fileID: 0}
+  myRbody: {fileID: 0}
 --- !u!114 &1871313508 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5715416335971100667, guid: 541ed11e270c6994ca5910042c7e04da, type: 3}
@@ -19911,9 +19915,10 @@ MonoBehaviour:
   gridPos: {x: 0, y: 0, z: 0}
   snapSpeed: 8
   autoSnap: 0
+  forceSnapDistance: 0.01
   floatFactor: {x: 0, y: 0, z: 0}
   intFactor: {x: 0, y: 0, z: 0}
-  debugDest: {fileID: 0}
+  myRbody: {fileID: 0}
 --- !u!114 &3160717958211979400
 MonoBehaviour:
   m_ObjectHideFlags: 0

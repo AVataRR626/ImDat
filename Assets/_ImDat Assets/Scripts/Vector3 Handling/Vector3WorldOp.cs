@@ -3,17 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Vector3WorldOp : MonoBehaviour
 {
     public enum Operation { Add, Sub, Cross, Proj, PlelPip};
 
+    [Header("Basic Settings")]
     public Operation operation;
     public Vector3Relay result;
     public GameObject resultDisplay;
     public int maxSubjects = 2;
     public List<Vector3WorldBase> operands;
+
+    [Header("Events")]
+    public UnityEvent onFirstOperand;
+    public UnityEvent onSecondOperand;
+    public UnityEvent onMergeOperand;
 
     [Header("System Stuff - Usually Don't Touch")]
     public Vector3WorldBase clonePrefab;
@@ -92,19 +99,24 @@ public class Vector3WorldOp : MonoBehaviour
         {
             Vector3WorldBase wb = other.GetComponent<Vector3WorldBase>();
             if (wb != null)
-            {
-                
+            {                
                 if (!operands.Contains(wb))
                 {
                     other.enabled = false;
                     wb.DetachHandle();
                     operands.Add(wb);
 
+                    //---- Handle Operations ----
                     if (operation == Operation.Add)
                     {
                         //align parallelogram graphics
-                        Vector3RelaySetterPosDelta rps = wb.GetComponent<Vector3RelaySetterPosDelta>();
-                        guideLines[operands.Count - 1].linkPoint = rps.referencePoint;
+                        IRelayReferencePoint rrp = wb.GetComponent<IRelayReferencePoint>();
+
+                        if (rrp != null)
+                        {
+                            guideLines[operands.Count - 1].linkPoint = rrp.GetReferencePoint();
+                        }
+
                     }
 
                     if(operation == Operation.Sub)
@@ -112,12 +124,12 @@ public class Vector3WorldOp : MonoBehaviour
                         if(operands.Count == 2)
                         {
                             //align direction graphics
-                            Vector3RelaySetterPosDelta [] rps = new Vector3RelaySetterPosDelta[2];
-                            rps[0] = operands[0].GetComponent<Vector3RelaySetterPosDelta>();
-                            rps[1] = operands[1].GetComponent<Vector3RelaySetterPosDelta>();
+                            IRelayReferencePoint[] rrp = new IRelayReferencePoint[2];
+                            rrp[0] = operands[0].GetComponent<IRelayReferencePoint>();
+                            rrp[1] = operands[1].GetComponent<IRelayReferencePoint>();
 
-                            guideLines[0].linkPoint = rps[0].referencePoint;
-                            guideLines[0].transform.parent = rps[1].referencePoint;
+                            guideLines[0].linkPoint = rrp[0].GetReferencePoint();
+                            guideLines[0].transform.parent = rrp[1].GetReferencePoint();
                             guideLines[0].transform.localPosition = Vector3.zero;
                         }
                         
@@ -127,12 +139,15 @@ public class Vector3WorldOp : MonoBehaviour
                     {
                         if (operands.Count == 2)
                         {
-                            //align projection graphics
-                            Vector3RelaySetterPosDelta[] rps = new Vector3RelaySetterPosDelta[2];
-                            rps[0] = resultDisplay.GetComponent<Vector3RelaySetterPosDelta>();
-                            rps[1] = operands[0].GetComponent<Vector3RelaySetterPosDelta>();
 
-                            guideLines[0].linkPoint = rps[1].referencePoint;
+                            SyncGuidelines_Proj();
+
+                            
+                            //align projection graphics
+                            //IRelayReferencePoint[] rrp = new IRelayReferencePoint[2];
+                            //rrp[0] = resultDisplay.GetComponent<IRelayReferencePoint>();
+                            //rrp[1] = operands[0].GetComponent<IRelayReferencePoint>();
+
                         }
                     }
 
@@ -142,12 +157,12 @@ public class Vector3WorldOp : MonoBehaviour
                         {
                             Vector3 AB = operands[0].value.value + operands[1].value.value;
 
-                            Vector3RelaySetterPosDelta[] rps = new Vector3RelaySetterPosDelta[2];
-                            rps[0] = operands[0].GetComponent<Vector3RelaySetterPosDelta>();
-                            rps[1] = operands[1].GetComponent<Vector3RelaySetterPosDelta>();
+                            IRelayReferencePoint[] rrp = new IRelayReferencePoint[2];
+                            rrp[0] = operands[0].GetComponent<IRelayReferencePoint>();
+                            rrp[1] = operands[1].GetComponent<Vector3RelaySetterPosDelta>();
 
-                            guideLines[0].linkPoint = rps[0].referencePoint;
-                            guideLines[1].linkPoint = rps[1].referencePoint;
+                            guideLines[0].linkPoint = rrp[0].GetReferencePoint();
+                            guideLines[1].linkPoint = rrp[1].GetReferencePoint();
                         }
 
                         if (operands.Count == 3)
@@ -158,10 +173,30 @@ public class Vector3WorldOp : MonoBehaviour
                             Vector3 finalCorner = AC + AB;
                         }
                     }
+
+                    //---- Handle Events ----
+                    if(operands.Count == 1)                    
+                        onFirstOperand.Invoke();
+
+                    if (operands.Count == 2)
+                        onSecondOperand.Invoke();
+
+                    onMergeOperand.Invoke();
+
                 }
             }
         }
         
+    }
+
+    public void SyncGuidelines_Proj()
+    {
+        //align projection graphics
+        IRelayReferencePoint[] rrp = new IRelayReferencePoint[2];
+        rrp[0] = resultDisplay.GetComponent<IRelayReferencePoint>();
+        rrp[1] = operands[0].GetComponent<IRelayReferencePoint>();
+
+        guideLines[0].linkPoint = rrp[1].GetReferencePoint();
     }
 
     public void SpawnClone()
@@ -191,6 +226,12 @@ public class Vector3WorldOp : MonoBehaviour
             Vector3WorldBase temp = operands[0];
             operands[0] = operands[1];
             operands[1] = temp;
+
+
+            if(operation == Operation.Proj)
+            {
+                SyncGuidelines_Proj();
+            }
         }
 
         Debug.Log("--- SWAP OPERANDS --- " + operands.Count);
