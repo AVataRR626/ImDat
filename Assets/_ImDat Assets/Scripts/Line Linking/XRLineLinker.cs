@@ -56,17 +56,22 @@ public class XRLineLinker : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (source == null)
+        XRLineLinker xrll = collision.gameObject.GetComponent<XRLineLinker>();
+
+        if (xrll == null)
         {
-            source = collision.transform;
-            state = State.OneLink;
-        }
-        else if (source != null)
-        {
-            if(destination == null)
+            if (source == null)
             {
-                destination = collision.transform;
-                state = State.TwoLinks;
+                source = collision.transform;
+                state = State.OneLink;
+            }
+            else if (source != null)
+            {
+                if (destination == null)
+                {
+                    destination = collision.transform;
+                    state = State.TwoLinks;
+                }
             }
         }
     }

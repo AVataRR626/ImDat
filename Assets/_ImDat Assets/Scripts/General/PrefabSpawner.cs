@@ -28,6 +28,6 @@ public class PrefabSpawner : MonoBehaviour
 
     public void SpawnObject(int i)
     {
-        GameObject newSpawn = Instantiate(spawnObjects[i], spawnPoint.position, transform.rotation);
+        GameObject newSpawn = Instantiate(spawnObjects[i], spawnPoint.position, spawnPoint.rotation);
     }
 }

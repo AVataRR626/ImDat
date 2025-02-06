@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5022259070990987359}
   - component: {fileID: 1552247328533075724}
   m_Layer: 0
-  m_Name: LineLinker
+  m_Name: Line Linker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,6 +60,7 @@ MonoBehaviour:
   myRenderers:
   - {fileID: 2951447086290323322}
   - {fileID: 6917566640361255326}
+  startRot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!33 &2723921574333073336
 MeshFilter:
   m_ObjectHideFlags: 0
