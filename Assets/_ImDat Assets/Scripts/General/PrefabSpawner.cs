@@ -15,12 +15,6 @@ public class PrefabSpawner : MonoBehaviour
             spawnPoint = transform;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SpawnObject()
     {
         SpawnObject(spawnIndex);
