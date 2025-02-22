@@ -169,8 +169,16 @@ public class Vector3WorldOp : MonoBehaviour
                         {
                             Vector3 AB = operands[0].value.value + operands[1].value.value;
                             Vector3 AC = operands[0].value.value + operands[2].value.value;                            
-                            Vector3 CB = operands[1].value.value + operands[2].value.value;
+                            Vector3 CB = operands[1].value.value + operands[3].value.value;
                             Vector3 finalCorner = AC + AB;
+
+                            IRelayReferencePoint[] rrp = new IRelayReferencePoint[2];
+
+                            rrp[0] = operands[0].GetComponent<IRelayReferencePoint>();
+                            rrp[1] = operands[1].GetComponent<Vector3RelaySetterPosDelta>();
+
+                            guideLines[0].transform.localPosition = operands[0].value.value;
+                            guideLines[0].linkPoint.localPosition = AC;
                         }
                     }
 
