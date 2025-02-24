@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 196872243253357776}
   - component: {fileID: 7260504051603557976}
   - component: {fileID: 5696459441553498163}
+  - component: {fileID: 5046683337272016595}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -259,6 +260,22 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &5046683337272016595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768453393171956654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288c801cb2de82a4cbcd81db7074f7ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncObjects:
+  - {fileID: 7406641471694836758}
+  - {fileID: 2660926337379628844}
+  - {fileID: 2911594038280957652}
 --- !u!1 &2531760270557755946
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +370,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 1.003, z: 0.254}
-  - {x: 0.20132205, y: 1.003, z: 0.15432298}
+  - {x: 0.20132193, y: 1.003, z: 0.15432271}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -427,6 +444,7 @@ GameObject:
   - component: {fileID: 435064156731254949}
   - component: {fileID: 4668488758572296424}
   - component: {fileID: 5160425886368997846}
+  - component: {fileID: 4530518325887136950}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -672,6 +690,22 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &4530518325887136950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2660926337379628844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288c801cb2de82a4cbcd81db7074f7ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncObjects:
+  - {fileID: 7406641471694836758}
+  - {fileID: 768453393171956654}
+  - {fileID: 2911594038280957652}
 --- !u!1 &2911594038280957652
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +720,7 @@ GameObject:
   - component: {fileID: 3873452449596918928}
   - component: {fileID: 686453251388745728}
   - component: {fileID: 7218528693187276352}
+  - component: {fileID: 5494654605615211511}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Untagged
@@ -931,6 +966,22 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &5494654605615211511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2911594038280957652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288c801cb2de82a4cbcd81db7074f7ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncObjects:
+  - {fileID: 7406641471694836758}
+  - {fileID: 768453393171956654}
+  - {fileID: 2660926337379628844}
 --- !u!1 &3119885098421906820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1076,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 1.003, z: 0.254}
-  - {x: 0.15959162, y: 1.003, z: 0.4705445}
+  - {x: 0.1595919, y: 1.003, z: 0.47054428}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1179,7 +1230,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 1.003, z: 0.254}
-  - {x: 0.061662853, y: 1.2030001, z: 0.20855495}
+  - {x: 0.061662793, y: 1.2030001, z: 0.20855488}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -1253,6 +1304,7 @@ GameObject:
   - component: {fileID: 1492267912646785480}
   - component: {fileID: 4559597516082965471}
   - component: {fileID: 4657591216907743085}
+  - component: {fileID: 7918803861119499949}
   m_Layer: 0
   m_Name: Root Sphere
   m_TagString: Untagged
@@ -1501,6 +1553,22 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &7918803861119499949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406641471694836758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288c801cb2de82a4cbcd81db7074f7ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncObjects:
+  - {fileID: 768453393171956654}
+  - {fileID: 2660926337379628844}
+  - {fileID: 2911594038280957652}
 --- !u!1 &7765711845778179551
 GameObject:
   m_ObjectHideFlags: 0

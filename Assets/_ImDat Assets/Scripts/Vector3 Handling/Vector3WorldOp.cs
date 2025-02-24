@@ -29,12 +29,28 @@ public class Vector3WorldOp : MonoBehaviour
     public float spawnClock = 0;
     public List<LineRendererLink> guideLines;
 
+
+    public void OnDisable()
+    {
+        foreach (Vector3WorldBase v in operands)
+        {
+            if (v != null)
+            {
+                Debug.Log("Disabling: " + v.gameObject.name + " ----");
+                v.gameObject.SetActive(false);
+            }
+        }
+    }
+
+
     public void OnDestroy()
     {
         foreach (Vector3WorldBase v in operands)
         {
             if (v != null)
-                Destroy(v.gameObject);
+            {
+                v.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -50,7 +66,8 @@ public class Vector3WorldOp : MonoBehaviour
 
         if(operands.Count < 2)
         {
-            resultDisplay.SetActive(false);
+            if(resultDisplay != null)
+                resultDisplay.SetActive(false);
         }
         else if(operands.Count == 2)
         {
@@ -69,10 +86,30 @@ public class Vector3WorldOp : MonoBehaviour
             if (operation == Operation.Proj)
                 result.value = Vector3.Project(operands[0].value.value, operands[1].value.value);
         }
+        else if (operands.Count == 3)
+        {
+            if(operation == Operation.PlelPip)
+            {
+
+                Vector3 AB = operands[0].value.value + operands[1].value.value;
+                Vector3 AC = operands[0].value.value + operands[2].value.value;
+                Vector3 BC = operands[1].value.value + operands[2].value.value;
+                Vector3 finalCorner = AC + AB - operands[0].value.value;
+                
+                guideLines[0].linkPoint.localPosition = AC;
+                guideLines[1].linkPoint.localPosition = AB;
+                guideLines[4].linkPoint.localPosition = AC;
+                guideLines[5].linkPoint.localPosition = finalCorner;
+                guideLines[6].linkPoint.localPosition = AB;
+                guideLines[7].linkPoint.localPosition = BC;
+                guideLines[8].linkPoint.localPosition = BC;
+
+            }
+        }
 
         if(spawnClock > 0)
         {
-            spawnClock -= Time.deltaTime;
+            spawnClock -= Time.fixedDeltaTime;
         }
         else
         {
@@ -106,11 +143,16 @@ public class Vector3WorldOp : MonoBehaviour
                     wb.DetachHandle();
                     operands.Add(wb);
 
+                    IRelayReferencePoint rrp = wb.GetComponent<IRelayReferencePoint>();
+
+                    //cascade destroy commands to host operation
+                    rrp.GetReferencePoint().GetComponent<DisableSync>().syncObjects.Add(this.gameObject);
+
                     //---- Handle Operations ----
                     if (operation == Operation.Add)
                     {
                         //align parallelogram graphics
-                        IRelayReferencePoint rrp = wb.GetComponent<IRelayReferencePoint>();
+                        
 
                         if (rrp != null)
                         {
@@ -124,12 +166,12 @@ public class Vector3WorldOp : MonoBehaviour
                         if(operands.Count == 2)
                         {
                             //align direction graphics
-                            IRelayReferencePoint[] rrp = new IRelayReferencePoint[2];
-                            rrp[0] = operands[0].GetComponent<IRelayReferencePoint>();
-                            rrp[1] = operands[1].GetComponent<IRelayReferencePoint>();
+                            IRelayReferencePoint[] rrps = new IRelayReferencePoint[2];
+                            rrps[0] = operands[0].GetComponent<IRelayReferencePoint>();
+                            rrps[1] = operands[1].GetComponent<IRelayReferencePoint>();
 
-                            guideLines[0].linkPoint = rrp[0].GetReferencePoint();
-                            guideLines[0].transform.parent = rrp[1].GetReferencePoint();
+                            guideLines[0].linkPoint = rrps[0].GetReferencePoint();
+                            guideLines[0].transform.parent = rrps[1].GetReferencePoint();
                             guideLines[0].transform.localPosition = Vector3.zero;
                         }
                         
@@ -153,32 +195,52 @@ public class Vector3WorldOp : MonoBehaviour
 
                     if(operation == Operation.PlelPip)
                     {
-                        if(operands.Count == 2)
-                        {
-                            Vector3 AB = operands[0].value.value + operands[1].value.value;
-
-                            IRelayReferencePoint[] rrp = new IRelayReferencePoint[2];
-                            rrp[0] = operands[0].GetComponent<IRelayReferencePoint>();
-                            rrp[1] = operands[1].GetComponent<Vector3RelaySetterPosDelta>();
-
-                            guideLines[0].linkPoint = rrp[0].GetReferencePoint();
-                            guideLines[1].linkPoint = rrp[1].GetReferencePoint();
-                        }
-
                         if (operands.Count == 3)
                         {
+
+                            //align direction graphics
+                            IRelayReferencePoint[] rrps = new IRelayReferencePoint[3];
+
+                            for(int i = 0; i < 3; i++)
+                                rrps[i] = operands[i].GetComponent<IRelayReferencePoint>();
+
+                            /*
+                            rrp[0] = operands[0].GetComponent<IRelayReferencePoint>();
+                            rrp[1] = operands[1].GetComponent<IRelayReferencePoint>();
+                            rrp[2] = operands[2].GetComponent<IRelayReferencePoint>();
+                            */
+
                             Vector3 AB = operands[0].value.value + operands[1].value.value;
                             Vector3 AC = operands[0].value.value + operands[2].value.value;                            
-                            Vector3 CB = operands[1].value.value + operands[3].value.value;
+                            Vector3 BC = operands[1].value.value + operands[2].value.value;
                             Vector3 finalCorner = AC + AB;
 
-                            IRelayReferencePoint[] rrp = new IRelayReferencePoint[2];
-
-                            rrp[0] = operands[0].GetComponent<IRelayReferencePoint>();
-                            rrp[1] = operands[1].GetComponent<Vector3RelaySetterPosDelta>();
-
-                            guideLines[0].transform.localPosition = operands[0].value.value;
+                            
+                            guideLines[0].transform.parent = rrps[0].GetReferencePoint();
+                            guideLines[0].transform.localPosition = Vector3.zero;
                             guideLines[0].linkPoint.localPosition = AC;
+
+                            guideLines[1].transform.parent = rrps[0].GetReferencePoint();
+                            guideLines[1].transform.localPosition = Vector3.zero;
+                            guideLines[1].linkPoint.localPosition = AB;
+
+                            guideLines[4].transform.parent = rrps[2].GetReferencePoint();
+                            guideLines[4].transform.localPosition = Vector3.zero;
+                            guideLines[4].linkPoint.localPosition = AC;
+
+                            guideLines[5].linkPoint.localPosition = finalCorner;
+
+                            guideLines[6].transform.parent = rrps[1].GetReferencePoint();
+                            guideLines[6].transform.localPosition = Vector3.zero;
+                            guideLines[6].linkPoint.localPosition = AB;
+
+                            guideLines[7].transform.parent = rrps[1].GetReferencePoint();
+                            guideLines[7].transform.localPosition = Vector3.zero;
+                            guideLines[7].linkPoint.localPosition = BC;
+
+                            guideLines[8].transform.parent = rrps[2].GetReferencePoint();
+                            guideLines[8].transform.localPosition = Vector3.zero;
+                            guideLines[8].linkPoint.localPosition = BC;
                         }
                     }
 

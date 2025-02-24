@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroySync : MonoBehaviour
 {
-    public GameObject[] syncObjects;
+    public List<GameObject> syncObjects;
 
     public void OnDestroy()
     {

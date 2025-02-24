@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DisableSync : MonoBehaviour
 {
-    public GameObject[] syncObjects;
+    public List<GameObject> syncObjects;
+
     public void OnDisable()
     {
         foreach (GameObject o in syncObjects)

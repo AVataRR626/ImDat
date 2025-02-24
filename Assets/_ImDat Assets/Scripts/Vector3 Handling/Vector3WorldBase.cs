@@ -10,6 +10,12 @@ public class Vector3WorldBase : MonoBehaviour
     public Vector3Relay referenceValue;
     public Renderer myRenderer;
 
+    [Header("Cloning Settings")]
+    public Vector3WorldBase clonePrefab;
+    public Transform clonePoint;
+    public bool cloneAllow = false;
+    public float spawnClock = 0;
+
     public void Start()
     {
         myHandle.transform.parent = null;
@@ -17,7 +23,7 @@ public class Vector3WorldBase : MonoBehaviour
             value = GetComponent<Vector3Relay>();
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
         if (myHandle != null)
         {
@@ -30,9 +36,19 @@ public class Vector3WorldBase : MonoBehaviour
             }
         }
 
-        if(referenceValue != null)
+        if (referenceValue != null)
         {
             value.value = referenceValue.value;
+        }
+
+
+        if (spawnClock > 0)
+        {
+            spawnClock -= Time.fixedDeltaTime;
+        }
+        else
+        {
+            spawnClock = 0;
         }
 
     }
@@ -41,9 +57,28 @@ public class Vector3WorldBase : MonoBehaviour
     public void DetachHandle()
     {
         myHandle.SetActive(false);
-        if(myRenderer != null)
+        if (myRenderer != null)
         {
             myRenderer.enabled = false;
         }
+    }
+
+    public void SpawnClone()
+    {
+        if (spawnClock <= 0)
+        { 
+            Vector3WorldBase newClone = Instantiate(clonePrefab, clonePoint.position, Quaternion.identity);
+            newClone.referenceValue = value;
+            spawnClock = 0.5f;
+        }
+    }
+
+    public void OnDisable()
+    {
+        if(myHandle != null)
+            myHandle.gameObject.SetActive(false);
+
+        if(referenceValue != null)
+            referenceValue.gameObject.SetActive(false);
     }
 }

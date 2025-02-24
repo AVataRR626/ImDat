@@ -7,6 +7,7 @@ public class DestroyOnCollide : MonoBehaviour
     public float disableDelay = 0.5f;
     public List<string> excludeTags;
     public bool armed = true;
+    public bool disableMode = true;
 
     public void Arm(bool newState)
     {
@@ -32,7 +33,11 @@ public class DestroyOnCollide : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(wait);
-            Destroy(o);
+
+            if(disableMode)
+                o.SetActive(false);
+            else
+                Destroy(o);
         }
     }
 }

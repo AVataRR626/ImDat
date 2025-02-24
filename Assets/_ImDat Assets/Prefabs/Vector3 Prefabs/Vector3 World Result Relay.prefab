@@ -73,6 +73,10 @@ MonoBehaviour:
   value: {fileID: 4222404004083480227}
   referenceValue: {fileID: 0}
   myRenderer: {fileID: 6849473275982490702}
+  clonePrefab: {fileID: 0}
+  clonePoint: {fileID: 0}
+  cloneAllow: 0
+  spawnClock: 0
 --- !u!114 &2506101929298086654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +236,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -449,7 +453,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0.225, y: 1.605, z: 0.266}
-  - {x: 0.225, y: 1.8528, z: 0.266}
+  - {x: 0.225, y: 1.7289, z: 0.266}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -736,7 +740,7 @@ Rigidbody:
   m_GameObject: {fileID: 5165000292712637848}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 1
+  m_Drag: 7
   m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1027,6 +1031,7 @@ GameObject:
   - component: {fileID: 7138153318339082604}
   - component: {fileID: 2418173708591711992}
   - component: {fileID: 1502764621347013784}
+  - component: {fileID: 2043106975201525860}
   m_Layer: 0
   m_Name: VectorHead
   m_TagString: Untagged
@@ -1129,3 +1134,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2043106975201525860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112816387845694128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288c801cb2de82a4cbcd81db7074f7ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncObjects:
+  - {fileID: 136240715586234643}
