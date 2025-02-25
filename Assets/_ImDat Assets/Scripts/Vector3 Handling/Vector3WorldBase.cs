@@ -78,7 +78,7 @@ public class Vector3WorldBase : MonoBehaviour
         if(myHandle != null)
             myHandle.gameObject.SetActive(false);
 
-        if(referenceValue != null)
-            referenceValue.gameObject.SetActive(false);
+        //if(referenceValue != null)
+            //referenceValue.gameObject.SetActive(false);
     }
 }
