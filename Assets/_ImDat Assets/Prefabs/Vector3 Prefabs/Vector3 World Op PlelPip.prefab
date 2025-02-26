@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 7707019785176842202}
   - component: {fileID: 2263698531303750269}
   - component: {fileID: 6411785378400647614}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,7 +1042,7 @@ GameObject:
   - component: {fileID: 3587586681975714540}
   - component: {fileID: 6056091633635166309}
   - component: {fileID: 7703284822950333913}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2076,6 +2076,7 @@ GameObject:
   - component: {fileID: 5373845995729914712}
   - component: {fileID: 702385373034550429}
   - component: {fileID: 2882557762216415376}
+  - component: {fileID: 330548618117966068}
   m_Layer: 0
   m_Name: Vector3 World Op PlelPip
   m_TagString: Untagged
@@ -2414,6 +2415,42 @@ MonoBehaviour:
   floatFactor: {x: 0, y: 0, z: 0}
   intFactor: {x: 0, y: 0, z: 0}
   myRbody: {fileID: 0}
+--- !u!114 &330548618117966068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8868788498953043189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64e149cb0f60bd4e9bf0a5cb97a2e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 1
+  eventDelay: 0.25
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClientHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8868788498953043189}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMasterHit:
+    m_PersistentCalls:
+      m_Calls: []
+  armed: 1
 --- !u!1001 &342539132007101425
 PrefabInstance:
   m_ObjectHideFlags: 0

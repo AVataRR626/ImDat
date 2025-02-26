@@ -25,6 +25,8 @@ public class DisableOnCollide : MonoBehaviour
         {
             yield return new WaitForSeconds(wait);
             o.SetActive(false);
+
+            break;
         }
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 89470022046334794}
   - component: {fileID: 6201409052261269505}
   - component: {fileID: 6726921069818368924}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 3176161842752751912}
   - component: {fileID: 3187089535935931142}
   - component: {fileID: 4287863681648916445}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 3067925123544556256}
   - component: {fileID: 6561663677858954459}
   - component: {fileID: 4598965669493219920}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 8336581725167476154}
   - component: {fileID: 2411080607534719029}
   - component: {fileID: 4061915907653020483}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,7 +670,7 @@ GameObject:
   - component: {fileID: 4804697504310929253}
   - component: {fileID: 8925636022715934656}
   - component: {fileID: 2295760451741885158}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Display Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -947,6 +947,7 @@ GameObject:
   - component: {fileID: 7268470784194437552}
   - component: {fileID: 2505153646540123450}
   - component: {fileID: -3193044535018236456}
+  - component: {fileID: 5932967427787252950}
   m_Layer: 0
   m_Name: Vector3 World Op Cross
   m_TagString: Untagged
@@ -1336,6 +1337,42 @@ MonoBehaviour:
   floatFactor: {x: 0, y: 0, z: 0}
   intFactor: {x: 0, y: 0, z: 0}
   myRbody: {fileID: 0}
+--- !u!114 &5932967427787252950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825924226136313498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64e149cb0f60bd4e9bf0a5cb97a2e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 1
+  eventDelay: 0.25
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClientHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8825924226136313498}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMasterHit:
+    m_PersistentCalls:
+      m_Calls: []
+  armed: 1
 --- !u!1001 &3538195467330843963
 PrefabInstance:
   m_ObjectHideFlags: 0

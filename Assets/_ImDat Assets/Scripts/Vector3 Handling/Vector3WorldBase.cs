@@ -16,6 +16,9 @@ public class Vector3WorldBase : MonoBehaviour
     public bool cloneAllow = false;
     public float spawnClock = 0;
 
+    [Header("System Stuff (usually don't touch)")]
+    public Vector3WorldOp myOperation;
+
     public void Start()
     {
         myHandle.transform.parent = null;
@@ -23,7 +26,7 @@ public class Vector3WorldBase : MonoBehaviour
             value = GetComponent<Vector3Relay>();
     }
 
-    public void FixedUpdate()
+    public void Update()
     {
         if (myHandle != null)
         {
@@ -44,7 +47,7 @@ public class Vector3WorldBase : MonoBehaviour
 
         if (spawnClock > 0)
         {
-            spawnClock -= Time.fixedDeltaTime;
+            spawnClock -= Time.deltaTime;
         }
         else
         {
@@ -73,10 +76,21 @@ public class Vector3WorldBase : MonoBehaviour
         }
     }
 
+    public void DelHammer()
+    {
+        gameObject.SetActive(false);
+    }
+
     public void OnDisable()
     {
+
+        Debug.Log("Vector3WorldBase: OnDisable");
+
         if(myHandle != null)
             myHandle.gameObject.SetActive(false);
+
+        if(myOperation != null)
+            myOperation.gameObject.SetActive(false);
 
         //if(referenceValue != null)
             //referenceValue.gameObject.SetActive(false);

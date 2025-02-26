@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 6113197626728817956}
   - component: {fileID: 3778783525763886677}
   - component: {fileID: 8067863549637197944}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 290466207558895043}
   - component: {fileID: 194096036305738953}
   - component: {fileID: 3163553992646609082}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Display Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 1864702786550481721}
   - component: {fileID: 6243533032650821813}
   - component: {fileID: 1103400762054413036}
+  - component: {fileID: 6707533165282770263}
   m_Layer: 0
   m_Name: Vector3 World Op Proj
   m_TagString: Untagged
@@ -709,6 +710,42 @@ MonoBehaviour:
   floatFactor: {x: 0, y: 0, z: 0}
   intFactor: {x: 0, y: 0, z: 0}
   myRbody: {fileID: 0}
+--- !u!114 &6707533165282770263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680407271955980002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64e149cb0f60bd4e9bf0a5cb97a2e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 1
+  eventDelay: 0.25
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClientHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1680407271955980002}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMasterHit:
+    m_PersistentCalls:
+      m_Calls: []
+  armed: 1
 --- !u!1 &2255641789153087611
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +904,7 @@ GameObject:
   - component: {fileID: 8138368564735217823}
   - component: {fileID: 8109242279784992113}
   - component: {fileID: 8537283449898490664}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1122,7 +1159,7 @@ GameObject:
   - component: {fileID: 6883357236139013693}
   - component: {fileID: 8669828325100917263}
   - component: {fileID: 2767526466887122822}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1198,7 +1235,7 @@ GameObject:
   - component: {fileID: 863824089155172910}
   - component: {fileID: 4223898799240465708}
   - component: {fileID: 5451173197573174260}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1571,6 +1608,34 @@ PrefabInstance:
     - target: {fileID: 4922582553321831162, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6729835529405994590}
+    - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SpawnClone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Vector3WorldOp, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

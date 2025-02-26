@@ -60,7 +60,7 @@ public class Vector3WorldOp : MonoBehaviour
         if (result == null)
             result = GetComponent<Vector3Relay>();
     }
-    void FixedUpdate()
+    void Update()
     {
         TrackOperands();
 
@@ -142,11 +142,9 @@ public class Vector3WorldOp : MonoBehaviour
                     other.enabled = false;
                     wb.DetachHandle();
                     operands.Add(wb);
+                    wb.myOperation = this;
 
                     IRelayReferencePoint rrp = wb.GetComponent<IRelayReferencePoint>();
-
-                    //cascade destroy commands to host operation
-                    rrp.GetReferencePoint().GetComponent<DisableSync>().syncObjects.Add(this.gameObject);
 
                     //---- Handle Operations ----
                     if (operation == Operation.Add)

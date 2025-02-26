@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 1122055985482867418}
   - component: {fileID: 8143136731638961474}
   - component: {fileID: 861935738056052266}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 7872807954864189911}
   - component: {fileID: 5007039768434322357}
   - component: {fileID: 8521634297316894760}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Display Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 1894717388263147831}
   - component: {fileID: 8736360021949710143}
   - component: {fileID: 6605979240988256941}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 8767565773377112875}
   - component: {fileID: 4301871456329152016}
   - component: {fileID: 855958965498340640}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 5526815515978906555}
   - component: {fileID: 7673000500450871156}
   - component: {fileID: 1416855528660703413}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 8302033555731663626}
   - component: {fileID: 7329572018027119840}
   - component: {fileID: -8353972138621572471}
+  - component: {fileID: 1838899396201048912}
   m_Layer: 0
   m_Name: Vector3 World Op Span
   m_TagString: Untagged
@@ -1024,6 +1025,42 @@ MonoBehaviour:
   floatFactor: {x: 0, y: 0, z: 0}
   intFactor: {x: 0, y: 0, z: 0}
   myRbody: {fileID: 0}
+--- !u!114 &1838899396201048912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290541710775089376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64e149cb0f60bd4e9bf0a5cb97a2e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 1
+  eventDelay: 0.25
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClientHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7290541710775089376}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMasterHit:
+    m_PersistentCalls:
+      m_Calls: []
+  armed: 1
 --- !u!1 &8299955270447384330
 GameObject:
   m_ObjectHideFlags: 0

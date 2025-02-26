@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5895658092403039491}
   - component: {fileID: 5437311829725526952}
   - component: {fileID: 5941145569561808931}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,8 +245,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -0.491, y: 1.353, z: 0.314}
-  - {x: -0.491, y: 1.478, z: 0.314}
+  - {x: 0.299, y: 1.322, z: 0.288}
+  - {x: 0.299, y: 1.447, z: 0.288}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -524,13 +524,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3102687820735706216}
-  - component: {fileID: 7290514873996472062}
-  - component: {fileID: 8224033555462183530}
   - component: {fileID: 3130769363666109608}
   - component: {fileID: 7905930847663907297}
   - component: {fileID: 5715725933997936882}
   - component: {fileID: 8653888589690732377}
   - component: {fileID: 3453810739282004830}
+  - component: {fileID: 7510959161243006858}
+  - component: {fileID: 2047739585430206177}
   m_Layer: 0
   m_Name: VectorBase Handle
   m_TagString: Soft Mergable
@@ -553,36 +553,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 317748400760304862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7290514873996472062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7078402026529714743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f34106d09e13c04d8f8cd87b176777d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: {x: 0, y: 0, z: 0}
-  display: {fileID: 0}
-  displayScale: 10
---- !u!114 &8224033555462183530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7078402026529714743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b8462a8b550dde4c9bf5b4be36e6222, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  output: {fileID: 7290514873996472062}
-  anchorPoint: {fileID: 0}
-  referencePoint: {fileID: 0}
 --- !u!33 &3130769363666109608
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -699,7 +669,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 65
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -830,6 +800,55 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &7510959161243006858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7078402026529714743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37a8268100a5ecd4b879cca5d70fb191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setGlobalPosToLocal: 0
+--- !u!114 &2047739585430206177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7078402026529714743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64e149cb0f60bd4e9bf0a5cb97a2e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 1
+  eventDelay: 0.25
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClientHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4776190769563723214}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMasterHit:
+    m_PersistentCalls:
+      m_Calls: []
+  armed: 1
 --- !u!1 &7823662669603096663
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +863,7 @@ GameObject:
   - component: {fileID: 8955118350027494544}
   - component: {fileID: 1361463620952125348}
   - component: {fileID: 7367635876358737288}
-  - component: {fileID: 2836640164047943535}
+  - component: {fileID: 2632816720196640983}
   m_Layer: 0
   m_Name: VectorHead
   m_TagString: Untagged
@@ -1090,7 +1109,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
---- !u!114 &2836640164047943535
+--- !u!114 &2632816720196640983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1099,11 +1118,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 7823662669603096663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 288c801cb2de82a4cbcd81db7074f7ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d64e149cb0f60bd4e9bf0a5cb97a2e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncObjects:
-  - {fileID: 4776190769563723214}
+  mode: 1
+  eventDelay: 0.25
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClientHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4776190769563723214}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMasterHit:
+    m_PersistentCalls:
+      m_Calls: []
+  armed: 1
 --- !u!1 &7992278683265538115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,7 +1156,7 @@ GameObject:
   - component: {fileID: 8090871442184249597}
   - component: {fileID: 2796970681051375770}
   - component: {fileID: 5127066067963745853}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1223,7 +1264,7 @@ GameObject:
   - component: {fileID: 6292869038809069555}
   - component: {fileID: 3592021786141717291}
   - component: {fileID: 958443231856543359}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Display Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

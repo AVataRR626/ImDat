@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3050835372629010560}
   - component: {fileID: 5446535290562173289}
   - component: {fileID: 9055491757458906459}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4500614290787794897}
   - component: {fileID: 4296106045842031863}
   - component: {fileID: 5626254755009366919}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 8581951949006127593}
   - component: {fileID: 6957140120362855291}
   - component: {fileID: 630959022265626907}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 6342515146816993470}
   - component: {fileID: 1414906312856037788}
   - component: {fileID: 6148601801518146918}
+  - component: {fileID: 2989142218168660286}
   m_Layer: 0
   m_Name: Vector3 World Op Sub
   m_TagString: Untagged
@@ -786,6 +787,42 @@ MonoBehaviour:
   floatFactor: {x: 0, y: 0, z: 0}
   intFactor: {x: 0, y: 0, z: 0}
   myRbody: {fileID: 0}
+--- !u!114 &2989142218168660286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841557228153725725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64e149cb0f60bd4e9bf0a5cb97a2e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 1
+  eventDelay: 0.25
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onClientHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3841557228153725725}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMasterHit:
+    m_PersistentCalls:
+      m_Calls: []
+  armed: 1
 --- !u!1 &3841863506205595105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,7 +1080,7 @@ GameObject:
   - component: {fileID: 1320977374776476533}
   - component: {fileID: 7594412336690629795}
   - component: {fileID: 4344368266963144188}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Display Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1402,7 +1439,7 @@ GameObject:
   - component: {fileID: 3272123909491668134}
   - component: {fileID: 7932825286439513307}
   - component: {fileID: 409440941492683082}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

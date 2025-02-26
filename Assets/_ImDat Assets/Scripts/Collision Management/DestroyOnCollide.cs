@@ -16,7 +16,7 @@ public class DestroyOnCollide : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(name + " DeleteOnCollide: ");
+        Debug.Log(name + " DeleteOnCollide(): disableMode:" + disableMode);
         if (armed)
         {
             if (!excludeTags.Contains(collision.collider.tag))
@@ -38,6 +38,8 @@ public class DestroyOnCollide : MonoBehaviour
                 o.SetActive(false);
             else
                 Destroy(o);
+
+            break;
         }
     }
 }
