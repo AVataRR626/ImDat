@@ -46,7 +46,15 @@ public class XRLineLinker : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void OnDisable()
+    {
+        if (myLine != null)
+        {
+            myLine.gameObject.SetActive(false);
+        }
+    }
+
+    private void Update()
     {
         SyncLineRenderer();
         SyncPosition();
