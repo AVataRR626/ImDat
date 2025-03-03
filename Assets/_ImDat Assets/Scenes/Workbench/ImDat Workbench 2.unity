@@ -2514,6 +2514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1999466945}
+  - component: {fileID: 1999466946}
   m_Layer: 0
   m_Name: Data Manager
   m_TagString: Untagged
@@ -2536,6 +2537,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1999466946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999466944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff68d72d90539df4b96fd8eb34d27e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textAsset: {fileID: 4900000, guid: d5739436171d2d5409b123dc3151a208, type: 3}
+  lineSplit: \n
+  colSplit: \t
+  lines: []
+  fieldNames: []
+  data: []
 --- !u!1 &2060138657
 GameObject:
   m_ObjectHideFlags: 0

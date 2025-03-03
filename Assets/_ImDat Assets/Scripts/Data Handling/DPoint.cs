@@ -11,7 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VPoint : MonoBehaviour
+public class DPoint : MonoBehaviour
 {
     public Vector3 rotationSpeed;
     public Vector3 oscilationSpeed;
