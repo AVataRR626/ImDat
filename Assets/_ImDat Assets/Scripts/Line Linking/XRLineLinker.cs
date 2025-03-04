@@ -77,8 +77,11 @@ public class XRLineLinker : MonoBehaviour
             {
                 if (destination == null)
                 {
-                    destination = collision.transform;
-                    state = State.TwoLinks;
+                    if (source != collision.transform)
+                    {
+                        destination = collision.transform;
+                        state = State.TwoLinks;
+                    }
                 }
             }
         }
@@ -88,6 +91,10 @@ public class XRLineLinker : MonoBehaviour
     {
         if (myLine != null)
         {
+            //the same source can't be the destination!
+            if (source == destination)
+                destination = null;
+
             if (source != null)
                 myLine.transform.position = source.position;
             else
