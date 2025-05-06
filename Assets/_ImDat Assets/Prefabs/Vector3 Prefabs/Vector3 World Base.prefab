@@ -471,6 +471,7 @@ MonoBehaviour:
   clonePoint: {fileID: 5964200395532870819}
   cloneAllow: 0
   spawnClock: 0
+  myOperation: {fileID: 0}
 --- !u!114 &8960628559031747728
 MonoBehaviour:
   m_ObjectHideFlags: 0
