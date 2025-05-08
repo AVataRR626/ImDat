@@ -9,13 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 975057b4fdcfb8142b3080d19a5cc712, type: 3}
-  m_Name: OpenXR Editor Settings
+  m_Script: {fileID: 11500000, guid: cad704687d7908f42b71e1e4516c590a, type: 3}
+  m_Name: Shift Key Function
   m_EditorClassIdentifier: 
-  Keys: 0700000001000000
-  Values:
-  - featureSets:
-    - com.unity.openxr.featureset.meta
-  - featureSets:
-    - com.unity.openxr.featureset.meta
-  m_vulkanAdditionalGraphicsQueue: 0
+  m_CapsLockDisplayIcon: {fileID: -92300165, guid: e6a95303640ef3c4188ac4583185f5ba, type: 3}
