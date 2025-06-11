@@ -3830,9 +3830,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2058998536950114616, guid: f95d062b92d5d274fa48ba5ae17d4cf8, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059479407693059913, guid: f95d062b92d5d274fa48ba5ae17d4cf8, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405038405448052424, guid: f95d062b92d5d274fa48ba5ae17d4cf8, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6950569604701227139, guid: f95d062b92d5d274fa48ba5ae17d4cf8, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523094367035375050, guid: f95d062b92d5d274fa48ba5ae17d4cf8, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8073309574296203154, guid: f95d062b92d5d274fa48ba5ae17d4cf8, type: 3}
       propertyPath: m_Name
       value: Low Poly Hand - Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220504698147000829, guid: f95d062b92d5d274fa48ba5ae17d4cf8, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252932250962961624, guid: f95d062b92d5d274fa48ba5ae17d4cf8, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8845792349362970023, guid: f95d062b92d5d274fa48ba5ae17d4cf8, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110424181665704800, guid: f95d062b92d5d274fa48ba5ae17d4cf8, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120990502432585120, guid: f95d062b92d5d274fa48ba5ae17d4cf8, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3847,6 +3887,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 236135455101171863, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 336619784743767821, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403477070836892074, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745399236248360503, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848919986139408102, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2889782462222846116, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312419860138816919, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297606435491749638, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147594669140252270, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7537579776665320341, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1621
@@ -3887,6 +3963,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8180333245529693169, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8898422973285986668, guid: 1be77db65804d1e418c7c45cbba0581f, type: 3}
       propertyPath: m_Name
       value: Low Poly Hand - Left
@@ -3904,6 +3984,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 76864869443983157, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2351947064661807301, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725864631889389892, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3171264977394193325, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1852
@@ -3947,6 +4039,38 @@ PrefabInstance:
     - target: {fileID: 6173280899237140647, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
       propertyPath: m_Name
       value: Poke Demo Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 7031279300187349358, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139992093567159213, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200313477742695789, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440101847244366762, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001298241509169877, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040901207220613104, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495330430172332999, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076862427995813518, guid: 1380b633ad61e7d439056f24f2cf147b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4061,6 +4185,50 @@ PrefabInstance:
     - target: {fileID: 2154333533426297268, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
       propertyPath: m_Name
       value: Pinch Demo Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447960852815017729, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502607619196152373, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020476228498047560, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676568420708703066, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3717893221657521791, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273656636899598885, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4546878460784888354, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4603593415271240930, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709955618061686458, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780803577348040907, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983645793951863114, guid: 1e7ff9ab44495d7468010939fe4b5332, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
