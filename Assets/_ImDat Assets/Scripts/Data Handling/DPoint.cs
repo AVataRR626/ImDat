@@ -7,9 +7,11 @@
  *  
  */
 
+using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DPoint : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class DPoint : MonoBehaviour
     public Vector3 oscilationSpeed;
     public Color primaryColour;
     public GameObject primaryGraphics;
+    public TextMeshProUGUI textDisplayTMPG;
 
     public List<ValueMap> valueMap = new List<ValueMap>();
     
@@ -28,7 +31,8 @@ public class DPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        primaryRenderer = primaryGraphics.GetComponent<Renderer>();
+        if(primaryGraphics != null)
+            primaryRenderer = primaryGraphics.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -36,7 +40,8 @@ public class DPoint : MonoBehaviour
     {
         //Instanced shader value changing
         //myRenderer.sharedMaterial.SetFloat(highlightKey, highlightValue);
-        primaryRenderer.material.SetColor(albedoKey, primaryColour);
+        if(primaryRenderer != null)
+            primaryRenderer.material.SetColor(albedoKey, primaryColour);
 
     }
 

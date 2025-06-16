@@ -16,7 +16,7 @@ public class TextBridge : MonoBehaviour
     public Transform dPointRoot;
     public DPoint dPointPrefab;
     public int dPointCount;
-    public Vector3 postLoadScale;
+    public Vector3 postLoadScale = Vector3.one;
     public Vector3 postLoadOffset;
 
 
@@ -24,7 +24,7 @@ public class TextBridge : MonoBehaviour
     public string[] rawLines;
     public string[] fieldNames;
     public List<string> cleanedLines;
-    public List<FieldValueList> dataWithFields = new List<FieldValueList>();
+    public List<FieldValueList> dataPerField = new List<FieldValueList>();
 
 
     public void Start()
@@ -66,8 +66,15 @@ public class TextBridge : MonoBehaviour
             {
                 FieldValueList fieldValues = new FieldValueList();
                 fieldValues.fieldName = field;
-                dataWithFields.Add(fieldValues);
+                dataPerField.Add(fieldValues);
             }
+        }
+        else if(colSplit.Length == 0)//can this ever be < 0? paranoid :p
+        {
+            Debug.Log("No column delimiter: Going into PARAGRAPH MODE.");
+            FieldValueList oneField = new FieldValueList();
+            oneField.fieldName = "paragraph";
+            dataPerField.Add(oneField);
         }
 
         dPointCount = 0;
@@ -75,12 +82,29 @@ public class TextBridge : MonoBehaviour
         {
             if (cleanedLines[i].Length > 1)
             {
-                string[] values = Regex.Split(cleanedLines[i], colSplit);                    
+                string[] values = Regex.Split(cleanedLines[i], colSplit);
 
-                for (int j = 0; j < dataWithFields.Count; j++)
+                //regular mode
+                if (colSplit.Length > 0)
                 {
-                    dataWithFields[j].fieldValues.Add(values[j]);
+                    if (values.Length == dataPerField.Count)
+                    {
+                        for (int j = 0; j < dataPerField.Count; j++)
+                        {
+                            dataPerField[j].fieldValues.Add(values[j]);
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError("!!! Number of field values != heading definition. Line: " + i);
+                    }
                 }
+                else
+                {
+                    Debug.Log("PARAGRAPH MODE - adding data to paragraphs");
+                    dataPerField[0].fieldValues.Add(cleanedLines[i]);
+                }
+
                 dPointCount++;
             }
         }
@@ -92,15 +116,22 @@ public class TextBridge : MonoBehaviour
         for(int i = 0; i < dPointCount; i++)
         {
             DPoint newDpoint = Instantiate(dPointPrefab, dPointRoot);
-            for(int j = 0; j < dataWithFields.Count; j++)
-            {                            
-                newDpoint.MapValue(dataWithFields[j].fieldName,
-                    dataWithFields[j].fieldValues[i]);
+
+            if (dataPerField.Count > 0)
+            {
+                for (int j = 0; j < dataPerField.Count; j++)
+                {
+                    newDpoint.MapValue(dataPerField[j].fieldName,
+                        dataPerField[j].fieldValues[i]);
+                }
+            }
+            else
+            {
+
             }
         }
 
         dPointRoot.transform.localScale = postLoadScale;
-
         dPointRoot.transform.position = postLoadOffset;
     }
 }
