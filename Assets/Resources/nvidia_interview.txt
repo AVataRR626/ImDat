@@ -1,0 +1,134 @@
+Jensen Huang: Great to see you, Ben.
+
+It is great to actually meet you in person, our previous talks have been over Zoom, and you’re here in Taiwan. You just announced a new building that’s pretty close to my house, so that’s exciting. When we talked before, I felt like you wanted the world to understand what GPUs could be. It was a pre-ChatGPT when we first started talking and now the world’s entire market rests on a knife’s edge when you announce earnings. Now, I think we’re in a quiet period, I’m not asking about earnings, but how does it feel to be thrust in that position, the center of the world in that regard?
+
+JH: Well, you asked me a question that I now have no interesting answer. The answer is I have no feelings about it, but I do do recognize this, that while we’re in the process of reinventing Nvidia, which it is always really central to what we’re doing at the office, we’re trying to reinvent Nvidia so that we could be ahead of the puck so that we could be where the industry will go and we want to solve problems that are hard and contribute to the industry. But very importantly now, not only have we created a computing platform, we reinvented our company, we’re much more of a data center scale company, and we offer technology that is for the very first time wholly integrated to work together, but disintegrated so that the whole ecosystem could work with it.
+
+But the thing that I said at the keynote, which is really important is that for the very first time that we’re building computers, not just for the technology industry, we’re building computers for a new industry called AI. Now, AI is partly technology, but it’s also partly labor and it augments labor as we know, and as we go into robotics it’ll be very, very clear. This new technology called AI actually is a new industry wholly, and this whole industry is going to be powered by factories, which is going to need a lot of computers, and people are just coming to terms with the fact that we are about to go into a future where we’re computing, what people call data centers, but they’re really AI factories, is likely to be quite large.
+
+I noticed you referenced Satya Nadella on the Microsoft earnings call reported the number of tokens that they processed, I think that was last quarter. Was that your favorite bit of earnings from this quarter? I latched onto it right away too, what a great metric.
+
+JH: In fact, the number of tokens that are actually being generated is way, way, way higher than that. That’s just the part that Microsoft was generating for third parties, but their own consumption is much, much higher and doesn’t include OpenAI either, so you could just imagine how much it is.
+
+From what I understand, that is a very, very large amount relative to the number that was reported. You’ve been on quite the world tour — you and I know Taiwan is beautiful, I mentioned the new office park — I do have to ask what’s the Middle East like at this time of the year?
+
+JH: Hot, but not humid.
+
+It’s a dry heat, right?
+
+JH: Yeah, it’s dry heat. I sort of really enjoyed it because the buildings were cold and I would walk out and just bask in the sun and I actually felt really great. But the nights are just incredible. The nights are incredible. Eating outside, having a cup of tea outside, it’s real incredible.
+
+I’m also of course asking about these AI deals that have been announced with Saudi Arabia and UAE. Why from your perspective is that important and why was it important for you to be there?
+
+JH: Well, because they asked me to be there, and we were there to announce two quite ambitious AI infrastructure build outs, one in Saudi Arabia and one in Abu Dhabi, and the leaders of both countries were very out in front recognizing the importance of their nations participating in the AI revolution, recognizing that they have an extraordinary opportunity, they have an abundance of energy and a shortage of labor, and the potential of their countries are limited by the amount of labor that they have, the amount of people that they have. So for the first time, they could transform, if you will, from energy to digital labor and robotics labor, agents, robots. They’re super focused on that and very articulate about it.
+
+His Royal Highness in Saudi Arabia was very articulate about it and very passionate about and understand the technology even. And Sheik Tahnoun in Abu Dhabi, very passionate about it, very forward thinking about it, understands very deeply the implications of the technology and the opportunities for them and so I was delighted to be there, we’re partnering with both of them.
+
+We helped launch a new company called HUMAIN in Saudi Arabia and their hope is to be on the world stage building these AI factories, hosting international companies, companies like OpenAI who was also there, and so a very big initiative.
+
+This is a big shift. Part and parcel of this is a step back from the AI diffusion rules, which I think was pretty harsh on those countries in particular, having a regulated number, has to be controlled by US companies, gated in some respects by what’s built in the US. Nvidia, I think contrary to your previous actions, had come out very strongly against those and from your perspective — there’s a bit where you’ve had to grow up, I feel like. Tae Kim said in his book that Nvidia is like an F1 car built around you, and you’re the driver and is there a bit where you never wanted to think about this government stuff, and so Nvidia never really thought about this government stuff, and then suddenly you’re the most important company of the world and you had to learn about this very, very quickly?
+
+JH: Well, it wasn’t that I never wanted to, I never had to. For the vast majority of Nvidia’s life we’ve been dealing with building the technology, building the company, building the industry, competing.
+
+Yeah, in an industry that’s pure competition.
+
+JH: Every single day, every single moment. Building our supply chain, building our ecosystem. Notice I just described a bunch of things that are gigantic in scale and scope, plenty hard in itself, and all of a sudden the diffusion rule came out, and I think we said it at the time, but I think it’s become apparent to everybody now, it is exactly wrong, it’s exactly wrong for America. If the goal of the diffusion rule is to ensure that America has to lead, the diffusion rule as it was written will exactly cause us to lose our lead.
+
+AI is not just the layer of software called a model, AI is a full stack thing, that’s the reason why everybody’s always talking about Nvidia systems and infrastructure and factories and so on and so forth. AI is full stack. If America wants to lead in AI, it has to start by leading full stack at the chip level, at the factory level, infrastructure level, at the model level as well as the application level — AI is all of that.
+
+You can’t just say, “Let’s go write a diffusion rule, protect one layer at the expense of everything else”, it’s nonsensical. The idea that we would limit American AI technology right at the time when international competitors have caught up, and we pretty much predicted it.
+
+And by international competitors, you mean other models?
+
+JH: China’s doing fantastic, 50% of the world’s AI researchers are Chinese and you’re not going to hold them back, you’re not going to stop them from advancing AI. Let’s face it, DeepSeek is deeply excellent work. To give them anything short of that is a lack of confidence so deep that I just can’t even tolerate it.
+
+Did we spur that work to be even better by virtue of the restrictions that were placed on them, particularly in terms of memory management and bandwidth?
+
+JH: Everybody loves competition. Companies need competition to inspire themselves, nations need that, and there’s no question we spur them. However, I fully expected China to be there every step of the way. Huawei is a formidable company, they’re a world-class technology company. The researchers, the AI scientists in China, they’re world-class. These are not Chinese AI researchers, they’re world-class AI researchers. You walk up and down the aisles of Anthropic or OpenAI or DeepMind, there’s a whole bunch of AI researchers there, and they’re from China. Of course it’s sensible, and they’re extraordinary and so the fact that they do extraordinary work is not surprising to me.
+
+The idea of AI diffusion limiting other countries access American technology is a mission expressed exactly wrong, it should be about accelerating the adoption of American technology everywhere before it’s too late. If the goal is for America to lead, then AI diffusion did exactly the opposite of that.
+
+I think AI diffusion also misses the big idea about how the AI stack works. The AI stack works like a computing platform, it’s a platform. The larger, the more capable your platform, the larger the install base, more developers run and develop on it. When more developers develop on it, it makes the results, the applications, that run on your computing platform better. As a result, you sell more, and more of your computing platform is adopted, which increases your install base, which increases developers using it to develop AI models, which increases — that positive feedback system can’t be understated for any computing platform, it’s the reason why Nvidia is successful today.
+
+The idea that we would have America not compete in the Chinese market, where 50% of the developers are, makes absolutely no sense from a computing infrastructure, computing architectural perspective. We ought to go and give American companies the opportunity to compete in China, offset the trade deficit, generate tax income for the American people, build, hire jobs, create more jobs.
+
+Nvidia and China
+Is it fair to say we’re halfway there? Because we started out with the Gulf deal and the AI diffusion rule and certainly, I think you can see from a nation-state competition perspective, having these countries—
+
+JH: These two ideas go hand in hand and what I mean by that is this: if we don’t compete in China, and we allow the Chinese ecosystem to build a rich ecosystem because we’re not there to compete for it, and new platforms are developed and they’re not American at a time when the world is diffusing AI technology, their leadership and their technology will diffuse all around the world.
+
+That’s my point, where from your perspective, we’re halfway there. At least we’re not cutting us off in other countries.
+
+JH: That’s right.
+
+But we should go all the way and let Nvidia back in China.
+
+JH: Yeah, but I would argue that, in fact, not going into China is about 90% of the way there. It’s actually not 50/50, it’s 90%.
+
+So we got 10% done.
+
+JH: Yeah, that’s right. Exactly.
+
+For the record, I agree with you. My view is this attempt to limit chip cells and then give them all the chip-making equipment they want is precisely backwards — it’s a lot harder to track chips than it is chip-making equipment anyway. One of the theories that people in Washington DC have put forward is, “The chip-making companies or the semiconductor equipment manufacturing companies, they’ve been in Washington for years, they’re very good at lobbying and Nvidia’s not here, and so they’re behind the eight ball”. Does that ring true to you? Do you just say have a hard time having people in Washington understand this point of view?
+
+JH: We had to work really hard in the last several years to build a presence in DC. We have a handful of people, most companies our size have hundreds of people, we have a handful. Our handful of people are amazing, they’re telling our story. They’re helping people explain, understand not just how chips work, but how ecosystems work, and how AI ecosystems work, and what are some of the unintended consequences of the policies.
+
+We want America to win. Every company should want their country to win, and every country should want their companies to win, those are not terrible things to feel, those are good things to feel, and it is also good that people love to win. Competition is a good thing, aspiring to be great is a good thing. When some country aspires to be great, we shouldn’t begrudge them. When some company aspires to be great, I don’t begrudge them. It causes us to all rise above and do even better than we could, and so I love watching people who aspire to be great.
+
+There’s no question China aspires to be great, good for them! They should expect absolutely nothing less, and for all of the AI researchers and AI scientists that I know around the world, they got to where they are because they all aspire to be great, and they are great. I think the idea that somehow that—
+
+To win, you have to put the other one down.
+
+JH: That’s right, it makes no sense to me. We ought to go faster. The reason why Nvidia is here today, the reason why we have our position today, we had absolutely zero support from anybody to get here, just let us keep running hard. I think the idea that we would hold other people back, as you mentioned, it just spurs them to be even greater, because these are amazing people.
+
+I agree. I find it, as an American, deeply frustrating. I feel we should want to win by out-innovating, by going faster and this idea we’re going to win by pulling up the ladder and cutting people off, and putting bureaucratic red tape on everyone and trying to track everything just seems deeply, frustratingly un-American to me.
+
+JH: Yeah. Anyhow, I think the President really sees it, he wants America to win.
+
+Well here’s a question on this, because this is the same administration that cut off the H20, a chip that you basically designed to the previous administration’s specs, and suddenly, “It’s not okay”, and now they’re doing this deal. The critics are there, “Oh, this is going to open it up to China, potentially, XYZ”. It does feel like a shift in administration, maybe they’d argue it’s still the same thing. But we’ve also had a lot of shifts between the US and China over the last six weeks, I think is one way to put it.
+
+Do you get a sense that maybe there’s been a real realization that this world is so interconnected and related, and what goes on one side happens on the other, and maybe it’s not going to be so easy to peel apart, and there’s going to be a return of pragmatism, and how do we manage this? Are you optimistic in that regard or are you preparing for the worst?
+
+JH: The President has a vision of what he wants to achieve, I support the President, I believe in the President, and I think that he’ll create a great outcome for America, and he’ll do it with respect and with an attitude of wanting to compete, but also looking for opportunities to cooperate. I sense that, I see all that. Obviously, I’m not in the White House and I don’t know exactly how they feel, but that’s what I sense.
+
+First of all, the ban on H20s, that’s the limit of what we can do to Hopper, and we’ve cut it down to there’s not much left to cut. We’ve written off — I think it’s $5.5 billion — no company in history has ever written off that much inventory, so this additional ban on Nvidia’s H20 is deeply painful. Its costs are enormously costly, not only am I losing $5.5 billion, we wrote off $5.5 billion, we walked away from $15 billion of sales and probably — what is it? — $3 billion worth of taxes. The China market is about $50 billion a year and it’s not $50 million, it’s $50 billion. $50 billion is like Boeing, not the plane, the whole company. To leave that behind so that the profits that go with that, the scale that goes with that, the ecosystem building that goes with that—
+
+That’s the real threat to CUDA in the long run—
+
+JH: That’s right.
+
+China builds an alternative.
+
+JH: Exactly. Anybody who thought that one chess move to somehow ban China from H20s would somehow cut off their ability to do AI is deeply uninformed.
+
+AI GDP Growth
+There’s an angle on this in the power stuff that I want to get to in a moment, but this is going to be more fun. Let’s leave aside all the government stuff, we’ll circle back around. A third way to get to my question about financial markets, governments, on today’s keynote you started out by saying, “We’re an infrastructure company, you need five-year roadmaps”. You mentioned in passing that your original TAM estimate when you started Nvidia was $300 million. When did you actually see this coming, “We’re going to be infrastructure?” — again, I go back to our conversations previously, my sense from those is you just wanted people to see this possibility. You saw the possibility of GPU computing, but the scale, has it blown your mind just a little bit?
+
+JH: If you watch my keynotes, as you do, almost pretty consistently, things that are happening today, I spoke about five years ago. At the time when I was speaking about it five years ago, the words weren’t as clear and the vocabulary I was using wasn’t as precise, but where we were going is consistent.
+
+So basically right now when you talk a lot about robotics at the end of every keynote, which you have been doing, that is our five-year preview that we should really be paying attention to.
+
+JH: Yeah. And in fact, I’ve been talking about it for about three years.
+
+Yeah, so a couple years from now.
+
+JH: It’s a couple years from now, I think it’s going to happen.
+
+The thing that is fairly deep and fairly profound for this industry is that for all of the last 60 years we’ve been the IT industry, which is a technology and tool, it’s a technology and tool used by people — for the very first time, we’re going to leave the IT budget, what we sell goes into the IT budget, we’re about to leave the IT budget and into the manufacturing or the OpEx budget.
+
+The manufacturing budget is because we’re building robots or because robotic systems are being used to build products and then the OpEx is because of digital workers. The world’s OpEx and CapEx is what? Combined $50 trillion? It’s a giant number. So the IT industry is about a trillion, we’re about to bring, because of AI, all of us into about a $50 trillion industry.
+
+Of course my first hope, and I think it will happen this way, although jobs will be changed and some jobs will be lost, a lot of jobs will be created. It is very likely that robotic systems where their agents are physical robots, will likely expand the world’s GDP. The reason for that is we have a shortage of labor, that’s why everybody’s employed. If you go around the United States, unemployment is at all-time lows, and so it’s because we just don’t have enough labor. Restaurants are having a hard time filling staff, many factories are obviously having a very hard time filling staff. I think the idea that you would hire a robot for $100,000 a year, I think people will do that in a heartbeat and the reason for that is because it just increased their ability to generate more revenues, and so I think that that next five, ten years is we’re likely to experience that expansion of GDP and a whole new industry of these token manufacturing systems that people now will understand.
+
+What I thought was also interesting about today’s keynote is I prepped for this interview before I came and I’m like, “Well, it’s probably going to be a bit of a rehash of GTC”, and I thought it was actually pretty starkly different. Here’s my interpretation, you have to let me know if it’s correct. It felt like GTC was for the hyperscalers and today’s presentation was for enterprise IT, it was like two different markets.
+
+JH: Yeah.
+
+Do I have that correct in terms of the target?
+
+JH: Enterprise IT or agents and robots, and agents for enterprise IT and robots for manufacturing and the reason for that is very clear, this is this the beginning of the ecosystem.
+
+You made a beautiful video by the way of the Taiwan ecosystem and that goes into making all the pieces, that was really great.
+
+Dynamo and Full-Stack Nvidia
+Let’s go to the GTC keynote, that was one of my favorite keynotes of yours, I do watch them all and watched them all for years. Some real Professor Jensen energy, as you explain the limitations of data centers, why Nvidia was the answer, and I interpreted that as kind of an anti-ASIC message. You had a combination of, you showed your roadmap, it’s like, “Try to keep up with this”, and then number two, you introduce the Pareto curve of latency versus bandwidth, and because they’re programmable, you can use the same GPUs all over this curve and of course, hyperscalers are the ones that are going make ASICs.

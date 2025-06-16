@@ -21,9 +21,10 @@ public class TextBridge : MonoBehaviour
 
 
     [Header("System Stuff (Usually Don't Touch)")]
-    public string[] lines;
+    public string[] rawLines;
     public string[] fieldNames;
-    public List<FieldValueList> data = new List<FieldValueList>();
+    public List<string> cleanedLines;
+    public List<FieldValueList> dataWithFields = new List<FieldValueList>();
 
 
     public void Start()
@@ -36,33 +37,49 @@ public class TextBridge : MonoBehaviour
     public void ReadData()
     {
         // "\n|\r|\r\n"
-        lines = Regex.Split(textAsset.text, lineSplit);
+        rawLines = Regex.Split(textAsset.text, lineSplit);
         //lines = textAsset.text.Split('\n');
 
         //fieldNames = lines[0].Split('\t');
         //fieldNames = lines[0].Split(colSplit);
-        fieldNames = Regex.Split(lines[0], colSplit);
 
-        
-
-        foreach (string field in fieldNames)
+        if (rawLines.Length > 0)
         {
-            FieldValueList fieldValues = new FieldValueList();
-            fieldValues.fieldName = field;
-            data.Add(fieldValues);
+            cleanedLines = new List<string>();
+
+            foreach (string line in rawLines)
+            {
+                if (!line.Equals(" ") && line.Length > 0)
+                {
+                    Debug.Log("z!" + line + "!z");
+                    cleanedLines.Add(line);
+                }
+                
+            }
+        }
+
+        if (colSplit.Length > 0)
+        {
+            fieldNames = Regex.Split(rawLines[0], colSplit);
+
+            foreach (string field in fieldNames)
+            {
+                FieldValueList fieldValues = new FieldValueList();
+                fieldValues.fieldName = field;
+                dataWithFields.Add(fieldValues);
+            }
         }
 
         dPointCount = 0;
-        for (int i = 1; i < lines.Length; i++)
+        for (int i = 1; i < cleanedLines.Count; i++)
         {
-            if (lines[i].Length > 1)
+            if (cleanedLines[i].Length > 1)
             {
-                string[] values = Regex.Split(lines[i], colSplit);
-                    
+                string[] values = Regex.Split(cleanedLines[i], colSplit);                    
 
-                for (int j = 0; j < data.Count; j++)
+                for (int j = 0; j < dataWithFields.Count; j++)
                 {
-                    data[j].fieldValues.Add(values[j]);
+                    dataWithFields[j].fieldValues.Add(values[j]);
                 }
                 dPointCount++;
             }
@@ -75,10 +92,10 @@ public class TextBridge : MonoBehaviour
         for(int i = 0; i < dPointCount; i++)
         {
             DPoint newDpoint = Instantiate(dPointPrefab, dPointRoot);
-            for(int j = 0; j < data.Count; j++)
+            for(int j = 0; j < dataWithFields.Count; j++)
             {                            
-                newDpoint.MapValue(data[j].fieldName,
-                    data[j].fieldValues[i]);
+                newDpoint.MapValue(dataWithFields[j].fieldName,
+                    dataWithFields[j].fieldValues[i]);
             }
         }
 
