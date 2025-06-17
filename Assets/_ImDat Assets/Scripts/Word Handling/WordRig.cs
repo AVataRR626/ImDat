@@ -18,6 +18,7 @@ public class WordRig : MonoBehaviour
     public GameObject myHandle;
     public TextMeshProUGUI textDisplayTMPG;
     public TMP_InputField keyboardInput;
+    public GameObject keyboardRig;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,5 +46,10 @@ public class WordRig : MonoBehaviour
     {
         WordRig newWord = Instantiate(wordRigPrefab,clonePoint.position,clonePoint.rotation);
         newWord.text = text;
+    }
+
+    public void ToggleKeyboard()
+    {
+        keyboardRig.SetActive(!keyboardRig.activeSelf);
     }
 }
