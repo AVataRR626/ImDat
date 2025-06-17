@@ -48,8 +48,19 @@ public class DPoint : MonoBehaviour
     public void MapValue(string fieldName, string rawString)
     {
         Debug.Log("fieldName: " + fieldName);
-        float floatConversion = float.Parse(rawString);
-        MapValue(fieldName, floatConversion);
+
+        try
+        {
+            //assume it's a number,
+            float floatConversion = float.Parse(rawString);
+            MapValue(fieldName, floatConversion);
+        }
+        catch
+        {
+            //but if it isn't, assume it's a paragraph
+            if(textDisplayTMPG != null)
+                textDisplayTMPG.text = rawString;
+        }
     }
 
     public void MapValue(string fieldName, float value)

@@ -117,17 +117,10 @@ public class TextBridge : MonoBehaviour
         {
             DPoint newDpoint = Instantiate(dPointPrefab, dPointRoot);
 
-            if (dataPerField.Count > 0)
+            for (int j = 0; j < dataPerField.Count; j++)
             {
-                for (int j = 0; j < dataPerField.Count; j++)
-                {
-                    newDpoint.MapValue(dataPerField[j].fieldName,
-                        dataPerField[j].fieldValues[i]);
-                }
-            }
-            else
-            {
-
+                newDpoint.MapValue(dataPerField[j].fieldName,
+                    dataPerField[j].fieldValues[i]);
             }
         }
 
