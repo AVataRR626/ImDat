@@ -4134,7 +4134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7076029110354759979, guid: 54e405d20a06e5142a7a2a2f7da9b104, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.14569998
+      value: 0.3438
       objectReference: {fileID: 0}
     - target: {fileID: 7076029110354759979, guid: 54e405d20a06e5142a7a2a2f7da9b104, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4788,6 +4788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 823757065}
   - component: {fileID: 823757064}
+  - component: {fileID: 823757066}
   m_Layer: 0
   m_Name: UI Root (1)
   m_TagString: Untagged
@@ -4805,7 +4806,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f81fcd9edaa84754869e9e9acb3aece4, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: f81fcd9edaa84754869e9e9acb3aece4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4908,6 +4909,20 @@ Transform:
   - {fileID: 1373589479}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &823757066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823757063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1fc36f707dc9f44bbd91408eac8a8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myInputField: {fileID: 1371533319}
+  selectedText: 
 --- !u!1001 &852679237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14153,7 +14168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7247369680598349620, guid: a13b4e9689931024e8b36b447bd2a0ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2157
+      value: -0.4372
       objectReference: {fileID: 0}
     - target: {fileID: 7247369680598349620, guid: a13b4e9689931024e8b36b447bd2a0ca, type: 3}
       propertyPath: m_LocalPosition.y
