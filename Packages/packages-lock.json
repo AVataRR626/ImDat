@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.unity.burst": {
-      "version": "1.8.23",
+      "version": "1.8.24",
       "depth": 2,
       "source": "registry",
       "dependencies": {
@@ -11,7 +11,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.8.2",
+      "version": "2.9.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -48,7 +48,7 @@
       "source": "builtin",
       "dependencies": {
         "com.unity.ide.visualstudio": "2.0.23",
-        "com.unity.ide.rider": "3.0.36",
+        "com.unity.ide.rider": "3.0.37",
         "com.unity.editorcoroutines": "1.0.0",
         "com.unity.performance.profile-analyzer": "1.2.3",
         "com.unity.test-framework": "1.5.1",
@@ -61,12 +61,12 @@
       "source": "builtin",
       "dependencies": {
         "com.unity.xr.interaction.toolkit": "3.0.8",
-        "com.unity.xr.oculus": "4.5.1",
-        "com.unity.xr.openxr": "1.14.3"
+        "com.unity.xr.oculus": "4.5.2",
+        "com.unity.xr.openxr": "1.15.1"
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.36",
+      "version": "3.0.37",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -84,7 +84,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.14.0",
+      "version": "1.14.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -228,7 +228,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.8.8",
+      "version": "1.8.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -277,7 +277,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.core-utils": {
-      "version": "2.5.2",
+      "version": "2.5.3",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -350,7 +350,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.oculus": {
-      "version": "4.5.1",
+      "version": "4.5.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -359,7 +359,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.openxr": {
-      "version": "1.14.3",
+      "version": "1.15.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
